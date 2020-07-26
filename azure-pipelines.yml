@@ -1,5 +1,5 @@
 #
-# Azure Pipelines configuration for building and testing create-react-app on Linux, Windows, and macOS.
+# Azure Pipelines configuration for building and testing create-npack-app on Linux, Windows, and macOS.
 #
 
 trigger:

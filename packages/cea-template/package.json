@@ -1,0 +1,28 @@
+{
+  "name": "cea-template",
+  "version": "1.0.4-alpha.0",
+  "keywords": [
+    "react",
+    "@express.ts",
+    "create-npack-app",
+    "template"
+  ],
+  "description": "The base template for Create Npack App.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/express-ts/create-npack-app.git",
+    "directory": "packages/cea-template"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "bugs": {
+    "url": "https://github.com/express-ts/create-npack-app/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}

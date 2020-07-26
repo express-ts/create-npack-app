@@ -26,12 +26,12 @@ const features = [
   {
     title: 'Only One Dependency',
     content:
-      'Your app only needs one build dependency. We test Create React App to make sure that all of its underlying pieces work together seamlessly – no complicated version mismatches.',
+      'Your app only needs one build dependency. We test Create Npack App to make sure that all of its underlying pieces work together seamlessly – no complicated version mismatches.',
   },
   {
     title: 'No Lock-In',
     content:
-      'Under the hood, we use webpack, Babel, ESLint, and other amazing projects to power your app. If you ever want an advanced configuration, you can ”eject” from Create React App and edit their config files directly.',
+      'Under the hood, we use webpack, Babel, ESLint, and other amazing projects to power your app. If you ever want an advanced configuration, you can ”eject” from Create Npack App and edit their config files directly.',
   },
 ];
 
@@ -85,14 +85,14 @@ function Home() {
             <div className="col col--4 col--offset-1">
               <h2>Get started in seconds</h2>
               <p>
-                Whether you’re using React or another library, Create React App
-                lets you <strong>focus on code, not build tools</strong>.
+                Whether you’re using React or another library, Create Express
+                App lets you <strong>focus on code, not build tools</strong>.
                 <br />
                 <br />
                 To create a project called <i>my-app</i>, run this command:
               </p>
               <CodeBlock className="language-sh">
-                npx create-react-app my-app
+                npx create-npack-app my-app
               </CodeBlock>
               <br />
             </div>
@@ -122,11 +122,11 @@ function Home() {
               <h2>Easy to Maintain</h2>
               <p>
                 Updating your build tooling is typically a daunting and
-                time-consuming task. When new versions of Create React App are
+                time-consuming task. When new versions of Create Npack App are
                 released, you can upgrade using a single command:
               </p>
               <CodeBlock className="language-sh">
-                npm install react-scripts@latest
+                npm install npack-scripts@latest
               </CodeBlock>
             </div>
           </div>

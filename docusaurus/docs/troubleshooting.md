@@ -40,7 +40,7 @@ Then paste it in your terminal and press on enter to run it. You could find more
 
 ## `npm test` hangs or crashes on macOS Sierra
 
-If you run `npm test` and the console gets stuck after printing `react-scripts test` to the console there might be a problem with your [Watchman](https://facebook.github.io/watchman/) installation as described in [facebook/create-react-app#713](https://github.com/facebook/create-react-app/issues/713).
+If you run `npm test` and the console gets stuck after printing `npack-scripts test` to the console there might be a problem with your [Watchman](https://facebook.github.io/watchman/) installation as described in [express-ts/create-npack-app#713](https://github.com/facebook/create-react-app/issues/713).
 
 We recommend deleting `node_modules` in your project and running `npm install` (or `yarn` if you use it) first. If it doesn't help, you can try one of the numerous workarounds mentioned in these issues:
 
@@ -104,6 +104,6 @@ This will only work for locales that have been explicitly imported before.
 
 ## `npm run build` fails to minify
 
-Before `react-scripts@2.0.0`, this problem was caused by third party `node_modules` using modern JavaScript features because the minifier couldn't handle them during the build. This has been solved by compiling standard modern JavaScript features inside `node_modules` in `react-scripts@2.0.0` and higher.
+Before `npack-scripts@2.0.0`, this problem was caused by third party `node_modules` using modern JavaScript features because the minifier couldn't handle them during the build. This has been solved by compiling standard modern JavaScript features inside `node_modules` in `npack-scripts@2.0.0` and higher.
 
-If you're seeing this error, you're likely using an old version of `react-scripts`. You can either fix it by avoiding a dependency that uses modern syntax, or by upgrading to `react-scripts@>=2.0.0` and following the migration instructions in the changelog.
+If you're seeing this error, you're likely using an old version of `npack-scripts`. You can either fix it by avoiding a dependency that uses modern syntax, or by upgrading to `npack-scripts@>=2.0.0` and following the migration instructions in the changelog.

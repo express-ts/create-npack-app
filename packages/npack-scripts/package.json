@@ -1,0 +1,94 @@
+{
+  "name": "npack-scripts",
+  "version": "3.4.3",
+  "description": "Configuration and scripts for Any Node (server,cli) App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/express-ts/create-npack-app.git",
+    "directory": "packages/npack-scripts"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/express-ts/create-npack-app/issues"
+  },
+  "files": [
+    "bin",
+    "config",
+    "lib",
+    "scripts",
+    "template",
+    "template-typescript",
+    "utils"
+  ],
+  "bin": {
+    "npack-scripts": "./bin/npack-scripts.js"
+  },
+  "types": "./lib/react-app.d.ts",
+  "dependencies": {
+    "@babel/core": "7.10.5",
+    "@svgr/webpack": "5.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "8.1.0",
+    "babel-plugin-named-asset-import": "^0.3.6",
+    "babel-preset-react-app": "^9.1.2",
+    "bfj": "^7.0.2",
+    "camelcase": "^6.0.0",
+    "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-npack-app": "^5.2.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "file-loader": "6.0.0",
+    "fs-extra": "^9.0.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.1.0",
+    "jest-circus": "26.1.0",
+    "jest-resolve": "26.1.0",
+    "jest-watch-typeahead": "0.6.0",
+    "pnp-webpack-plugin": "1.6.4",
+    "react-app-polyfill": "^1.0.6",
+    "react-dev-utils": "^10.2.1",
+    "resolve": "1.17.0",
+    "run-node-webpack-plugin": "^1.2.2",
+    "semver": "7.3.2",
+    "terser-webpack-plugin": "3.0.7",
+    "ts-loader": "^6.2.2",
+    "ts-pnp": "1.2.0",
+    "url-loader": "4.1.0",
+    "webpack": "4.43.0",
+    "webpack-dev-server": "3.11.0",
+    "webpack-node-externals": "^2.3.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.1.3"
+  },
+  "peerDependencies": {
+    "typescript": "^3.2.1"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

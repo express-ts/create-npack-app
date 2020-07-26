@@ -8,7 +8,7 @@ sidebar_label: Analyzing Bundle Size
 JavaScript bundles using the source maps. This helps you understand where code
 bloat is coming from.
 
-To add Source map explorer to a Create React App project, follow these steps:
+To add Source map explorer to a Create Npack App project, follow these steps:
 
 ```sh
 npm install --save source-map-explorer
@@ -25,9 +25,9 @@ Then in `package.json`, add the following line to `scripts`:
 ```diff
    "scripts": {
 +    "analyze": "source-map-explorer 'build/static/js/*.js'",
-     "start": "react-scripts start",
-     "build": "react-scripts build",
-     "test": "react-scripts test",
+     "start": "npack-scripts start",
+     "build": "npack-scripts build",
+     "test": "npack-scripts test",
 ```
 
 Then to analyze the bundle run the production build then run the analyze

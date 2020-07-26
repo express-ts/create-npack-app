@@ -1,6 +1,6 @@
-# Contributing to Create React App
+# Contributing to Create Npack App
 
-Loving Create React App and want to get involved? Thanks! There are plenty of ways you can help.
+Loving Create Npack App and want to get involved? Thanks! There are plenty of ways you can help.
 
 Please take a moment to review this document in order to make the contribution process straightforward and effective for everyone involved.
 
@@ -21,7 +21,7 @@ Instead of letting the user specify the entry filename, we always assume it to b
 
 ### Heuristics
 
-Normally, `npm start` runs on port `3000`, and this is not explicitly configurable. However, some environments like cloud IDEs want the programs to run on a specific port to serve their output. We want to play well with different environments, so Create React App reads `PORT` environment variable and prefers it when it is specified. The trick is that we know cloud IDEs already specify it automatically, so there is no need for the user to do anything. Create React App relies on heuristics to do the right thing depending on environment.
+Normally, `npm start` runs on port `3000`, and this is not explicitly configurable. However, some environments like cloud IDEs want the programs to run on a specific port to serve their output. We want to play well with different environments, so Create Npack App reads `PORT` environment variable and prefers it when it is specified. The trick is that we know cloud IDEs already specify it automatically, so there is no need for the user to do anything. Create Npack App relies on heuristics to do the right thing depending on environment.
 
 <!--alex disable just-->
 
@@ -29,9 +29,9 @@ Another example of this is how `npm test` normally launches the watcher, but if 
 
 ### Interactivity
 
-We prefer to add interactivity to the command line interface rather than add configuration flags. For example, `npm start` will attempt to run with port `3000` by default, but it may be busy. Many other tools fail in this case and ask that you pass a different port, but Create React App will display a prompt asking if you’d like to run the app on the next available port.
+We prefer to add interactivity to the command line interface rather than add configuration flags. For example, `npm start` will attempt to run with port `3000` by default, but it may be busy. Many other tools fail in this case and ask that you pass a different port, but Create Npack App will display a prompt asking if you’d like to run the app on the next available port.
 
-Another example of interactivity is `npm test` watcher interface. Instead of asking people to pass command line flags for switching between test runner modes or search patterns, we print a hint with keys that you can press during the test session to instruct watcher what to do. Jest supports both flags and interactive CLI but Create React App prefers long-running sessions to keep user immersed in the flow over short-running sessions with different flags.
+Another example of interactivity is `npm test` watcher interface. Instead of asking people to pass command line flags for switching between test runner modes or search patterns, we print a hint with keys that you can press during the test session to instruct watcher what to do. Jest supports both flags and interactive CLI but Create Npack App prefers long-running sessions to keep user immersed in the flow over short-running sessions with different flags.
 
 ### Breaking the Rules
 
@@ -41,65 +41,65 @@ No rules are perfect. Sometimes we may introduce flags or configuration if we be
 
 Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
-Please **ask first** if somebody else is already working on this or the core developers think your feature is in-scope for Create React App. Generally always have a related issue with discussions for whatever you are including.
+Please **ask first** if somebody else is already working on this or the core developers think your feature is in-scope for Create Npack App. Generally always have a related issue with discussions for whatever you are including.
 
 Please also provide a **test plan**, i.e. specify how you verified that your addition works.
 
-## Folder Structure of Create React App
+## Folder Structure of Create Npack App
 
-`create-react-app` is a monorepo, meaning it is divided into independent sub-packages.<br>
-These packages can be found in the [`packages/`](https://github.com/facebook/create-react-app/tree/master/packages) directory.
+`create-npack-app` is a monorepo, meaning it is divided into independent sub-packages.<br>
+These packages can be found in the [`packages/`](https://github.com/express-ts/create-npack-app/tree/master/packages) directory.
 
 ### Overview of directory structure
 
 ```
 packages/
   babel-preset-react-app/
-  create-react-app/
+  create-npack-app/
   eslint-config-react-app/
   react-dev-utils/
-  react-scripts/
+  npack-scripts/
 ```
 
 ### Package Descriptions
 
-#### [babel-preset-react-app](https://github.com/facebook/create-react-app/tree/master/packages/babel-preset-react-app)
+#### [babel-preset-react-app](https://github.com/express-ts/create-npack-app/tree/master/packages/babel-preset-react-app)
 
-This package is a babel preset intended to be used with `react-scripts`.<br>
+This package is a babel preset intended to be used with `npack-scripts`.<br>
 It targets platforms that React is designed to support (IE 11+) and enables experimental features used heavily at Facebook.<br>
-This package is enabled by default for all `create-react-app` scaffolded applications.
+This package is enabled by default for all `create-npack-app` scaffolded applications.
 
-#### [create-react-app](https://github.com/facebook/create-react-app/tree/master/packages/create-react-app)
+#### [create-npack-app](https://github.com/express-ts/create-npack-app/tree/master/packages/create-npack-app)
 
 The global CLI command code can be found in this directory, and shouldn't often be changed. It should run on Node 0.10+.
 
-#### [eslint-config-react-app](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app)
+#### [eslint-config-react-app](https://github.com/express-ts/create-npack-app/tree/master/packages/eslint-config-react-app)
 
 This package contains a conservative set of rules focused on making errors apparent and enforces no style rules.<br>
-This package is enabled by default for all `create-react-app` scaffolded applications.
+This package is enabled by default for all `create-npack-app` scaffolded applications.
 
-#### [react-dev-utils](https://github.com/facebook/create-react-app/tree/master/packages/react-dev-utils)
+#### [react-dev-utils](https://github.com/express-ts/create-npack-app/tree/master/packages/react-dev-utils)
 
-This package contains utilities used for `react-scripts` and sibling packages.<br>
+This package contains utilities used for `npack-scripts` and sibling packages.<br>
 Its main purpose is to conceal code which the user shouldn't be burdened with upon ejecting.
 
-#### [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts)
+#### [npack-scripts](https://github.com/express-ts/create-npack-app/tree/master/packages/npack-scripts)
 
 This package is the heart of the project, which contains the scripts for setting up the development server, building production builds, configuring all software used, etc.<br>
 All functionality must be retained (and configuration given to the user) if they choose to eject.
 
 ## Setting Up a Local Copy
 
-1. Clone the repo with `git clone https://github.com/facebook/create-react-app`
+1. Clone the repo with `git clone https://github.com/express-ts/create-npack-app`
 
-2. Run `yarn` in the root `create-react-app` folder.
+2. Run `yarn` in the root `create-npack-app` folder.
 
 Once it is done, you can modify any file locally and run `yarn start`, `yarn test` or `yarn build` like you can in a generated project. It will serve the application from the files located in `packages/cra-template/template`.
 
 If you want to try out the end-to-end flow with the global CLI, you can do this too:
 
 ```sh
-yarn create-react-app my-app
+yarn create-npack-app my-app
 cd my-app
 ```
 
@@ -113,7 +113,7 @@ More detailed information are in the dedicated [README](/test/README.md).
 
 ### CI testing with private packages
 
-**create-react-app** relies on main registry to fetch all dependencies, but, if you are in the need to usage of custom private packages that need to be fetch while running E2E test you might need a different configuration.
+**create-npack-app** relies on main registry to fetch all dependencies, but, if you are in the need to usage of custom private packages that need to be fetch while running E2E test you might need a different configuration.
 
 #### Customizing E2E registry configuration
 
@@ -139,11 +139,11 @@ By default git would use `CRLF` line endings which would cause the scripts to fa
 
 ## Cutting a Release
 
-1. Tag all merged pull requests that go into the release with the relevant milestone. Each merged PR should also be labeled with one of the [labels](https://github.com/facebook/create-react-app/labels) named `tag: ...` to indicate what kind of change it is. **Make sure all breaking changes are correctly labelled with `tag: breaking change`.**
+1. Tag all merged pull requests that go into the release with the relevant milestone. Each merged PR should also be labeled with one of the [labels](https://github.com/express-ts/create-npack-app/labels) named `tag: ...` to indicate what kind of change it is. **Make sure all breaking changes are correctly labelled with `tag: breaking change`.**
 2. Close the milestone and create a new one for the next release.
-3. In most releases, only `react-scripts` needs to be released. If you don’t have any changes to the `packages/create-react-app` folder, you don’t need to bump its version or publish it (the publish script will publish only changed packages).
-4. Note that files in `packages/create-react-app` should be modified with extreme caution. Since it’s a global CLI, any version of `create-react-app` (global CLI) including very old ones should work with the latest version of `react-scripts`.
-5. Run `yarn compile:lockfile`. The command will generate an updated lockfile in `packages/create-react-app` that should be committed.
+3. In most releases, only `npack-scripts` needs to be released. If you don’t have any changes to the `packages/create-npack-app` folder, you don’t need to bump its version or publish it (the publish script will publish only changed packages).
+4. Note that files in `packages/create-npack-app` should be modified with extreme caution. Since it’s a global CLI, any version of `create-npack-app` (global CLI) including very old ones should work with the latest version of `npack-scripts`.
+5. Run `yarn compile:lockfile`. The command will generate an updated lockfile in `packages/create-npack-app` that should be committed.
 6. Create a change log entry for the release:
 
 - You'll need an [access token for the GitHub API](https://help.github.com/articles/creating-an-access-token-for-command-line-use/). Save it to this environment variable: `export GITHUB_AUTH="..."`

@@ -37,13 +37,13 @@ module.exports = class TestSetup {
     const shouldInstallScripts = !this.isLocal;
     if (shouldInstallScripts) {
       packageJson.dependencies = Object.assign({}, packageJson.dependencies, {
-        'react-scripts': 'latest',
+        'npack-scripts': 'latest',
       });
     }
     packageJson.scripts = Object.assign({}, packageJson.scripts, {
-      start: 'react-scripts start',
-      build: 'react-scripts build',
-      test: 'react-scripts test',
+      start: 'npack-scripts start',
+      build: 'npack-scripts build',
+      test: 'npack-scripts test',
     });
     packageJson.license = packageJson.license || 'UNLICENSED';
     await fs.writeJson(
@@ -71,14 +71,14 @@ module.exports = class TestSetup {
             __dirname,
             '../../../..',
             'packages',
-            'react-scripts',
+            'npack-scripts',
             'bin',
-            'react-scripts.js'
+            'npack-scripts.js'
           )
         ),
-        path.join(this.testDirectory, 'node_modules', '.bin', 'react-scripts')
+        path.join(this.testDirectory, 'node_modules', '.bin', 'npack-scripts')
       );
-      await execa('yarnpkg', ['link', 'react-scripts'], {
+      await execa('yarnpkg', ['link', 'npack-scripts'], {
         cwd: this.testDirectory,
       });
     }

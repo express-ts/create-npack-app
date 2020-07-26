@@ -5,10 +5,10 @@
 # LICENSE file in the root directory of this source tree.
 
 # ******************************************************************************
-# This releases an update to the `react-scripts` package.
+# This releases an update to the `npack-scripts` package.
 # Don't use `npm publish` for it.
 # Read the release instructions:
-# https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md#cutting-a-release
+# https://github.com/express-ts/create-npack-app/blob/master/CONTRIBUTING.md#cutting-a-release
 # ******************************************************************************
 
 # Start in tasks/ even if run from root directory
@@ -34,11 +34,6 @@ if [ -n "$(git status --porcelain)" ]; then
   echo "Your git status is not clean. Aborting.";
   exit 1;
 fi
-
-# Compile
-cd packages/react-error-overlay/
-npm run build:prod
-cd ../..
 
 # Get 2FA when not CI
 otp=""

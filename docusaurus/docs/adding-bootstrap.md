@@ -27,13 +27,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 ## Using a Custom Theme
 
-> Note: this feature is available with `react-scripts@2.0.0` and higher.
+> Note: this feature is available with `npack-scripts@2.0.0` and higher.
 
 Sometimes you might need to tweak the visual styles of Bootstrap (or equivalent package).
 
-As of `react-scripts@2.0.0` you can import `.scss` files. This makes it possible to use a package's built-in Sass variables for global style preferences.
+As of `npack-scripts@2.0.0` you can import `.scss` files. This makes it possible to use a package's built-in Sass variables for global style preferences.
 
-To enable `scss` in Create React App you will need to install `node-sass`.
+To enable `scss` in Create Npack App you will need to install `node-sass`.
 
 ```sh
 npm install --save node-sass

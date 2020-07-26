@@ -23,7 +23,7 @@ function cleanup {
   echo 'Cleaning up.'
   cd "$root_path"
   # Uncomment when snapshot testing is enabled by default:
-  # rm ./packages/react-scripts/template/src/__snapshots__/App.test.js.snap
+  # rm ./packages/npack-scripts/template/src/__snapshots__/App.test.js.snap
   rm -rf "$temp_app_path"
   # Restore the original NPM and Yarn registry URLs and stop Verdaccio
   stopLocalRegistry
@@ -64,17 +64,17 @@ cd ..
 root_path=$PWD
 
 # Make sure we don't introduce accidental references to PATENTS.
-EXPECTED='packages/react-error-overlay/fixtures/bundle.mjs
-packages/react-error-overlay/fixtures/bundle.mjs.map
-packages/react-error-overlay/fixtures/bundle_u.mjs
-packages/react-error-overlay/fixtures/bundle_u.mjs.map
-tasks/e2e-simple.sh'
-ACTUAL=$(git grep -l PATENTS)
-if [ "$EXPECTED" != "$ACTUAL" ]; then
-  echo "PATENTS crept into some new files?"
-  diff -u <(echo "$EXPECTED") <(echo "$ACTUAL") || true
-  exit 1
-fi
+#EXPECTED='packages/react-error-overlay/fixtures/bundle.mjs
+#packages/react-error-overlay/fixtures/bundle.mjs.map
+#packages/react-error-overlay/fixtures/bundle_u.mjs
+#packages/react-error-overlay/fixtures/bundle_u.mjs.map
+#tasks/e2e-simple.sh'
+#ACTUAL=$(git grep -l PATENTS)
+#if [ "$EXPECTED" != "$ACTUAL" ]; then
+#  echo "PATENTS crept into some new files?"
+#  diff -u <(echo "$EXPECTED") <(echo "$ACTUAL") || true
+#  exit 1
+#fi
 
 if hash npm 2>/dev/null
 then
@@ -87,48 +87,20 @@ yarn
 # Start the local NPM registry
 startLocalRegistry "$root_path"/tasks/verdaccio.yaml
 
-# Lint own code
-./node_modules/.bin/eslint --max-warnings 0 packages/babel-preset-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/confusing-browser-globals/
-./node_modules/.bin/eslint --max-warnings 0 packages/create-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/eslint-config-react-app/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-dev-utils/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-error-overlay/src/
-./node_modules/.bin/eslint --max-warnings 0 packages/react-scripts/
-
-cd packages/react-error-overlay/
-yarn test
-if [ "$AGENT_OS" != 'Windows_NT' ]; then
-  # Flow started hanging on Windows build agents
-  yarn flow
-fi
-cd ../..
-
-cd packages/react-dev-utils/
-yarn test
-cd ../..
-
-cd packages/babel-plugin-named-asset-import/
-yarn test
-cd ../..
-
-cd packages/confusing-browser-globals/
-yarn test
-cd ../..
 
 # ******************************************************************************
-# First, test the create-react-app development environment.
+# First, test the create-npack-app development environment.
 # This does not affect our users but makes sure we can develop it.
 # ******************************************************************************
 
 # Test local build command
 yarn build
 # Check for expected output
-exists build/*.html
-exists build/static/js/*.js
-exists build/static/css/*.css
-exists build/static/media/*.svg
-exists build/favicon.ico
+#exists build/*.html
+exists build/*.js
+#exists build/static/css/*.css
+#exists build/static/media/*.svg
+#exists build/favicon.ico
 
 # Run tests with CI flag
 CI=true yarn test
@@ -142,17 +114,17 @@ yarn start --smoke-test
 publishToLocalRegistry
 
 # ******************************************************************************
-# Install react-scripts prerelease via create-react-app prerelease.
+# Install npack-scripts prerelease via create-npack-app prerelease.
 # ******************************************************************************
 
 # Install the app in a temporary location
 cd $temp_app_path
-npx create-react-app test-app
+npx create-npack-app test-app
 
 # TODO: verify we installed prerelease
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-npack-app to create an app depending on npack-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
@@ -232,11 +204,11 @@ cd test-app
 # Test the build
 yarn build
 # Check for expected output
-exists build/*.html
-exists build/static/js/*.js
-exists build/static/css/*.css
-exists build/static/media/*.svg
-exists build/favicon.ico
+#exists build/*.html
+exists build/*.js
+#exists build/static/css/*.css
+#exists build/static/media/*.svg
+#exists build/favicon.ico
 
 # Run tests with CI flag
 CI=true yarn test
@@ -265,11 +237,11 @@ test -n "$(git diff --staged --name-only)"
 # Test the build
 yarn build
 # Check for expected output
-exists build/*.html
-exists build/static/js/*.js
-exists build/static/css/*.css
-exists build/static/media/*.svg
-exists build/favicon.ico
+#exists build/*.html
+exists build/*.js
+#exists build/static/css/*.css
+#exists build/static/media/*.svg
+#exists build/favicon.ico
 
 # Run tests, overriding the watch option to disable it.
 # `CI=true yarn test` won't work here because `yarn test` becomes just `jest`.

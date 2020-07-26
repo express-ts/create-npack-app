@@ -4,7 +4,7 @@ title: Using HTTPS in Development
 sidebar_label: HTTPS in Development
 ---
 
-> Note: this feature is available with `react-scripts@0.4.0` and higher.
+> Note: this feature is available with `npack-scripts@0.4.0` and higher.
 
 You may require the dev server to serve pages over HTTPS. One particular case where this could be useful is when using [the "proxy" feature](proxying-api-requests-in-development.md) to proxy requests to an API server when that API server is itself serving HTTPS.
 
@@ -46,9 +46,9 @@ To avoid having to set the environment variable each time, you can either includ
 
 ```json
 {
-  "start": "HTTPS=true react-scripts start"
+  "start": "HTTPS=true npack-scripts start"
 }
 ```
 
 Or you can create a `.env` file with `HTTPS=true` set.
-[Learn more about environment variables in CRA](https://create-react-app.dev/docs/adding-custom-environment-variables).
+[Learn more about environment variables in CRA](https://create-npack-app.dev/docs/adding-custom-environment-variables).

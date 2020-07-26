@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-npack-app",
+  "version": "5.2.3",
+  "description": "ESLint configuration used by Create Npack App",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/express-ts/create-npack-app.git",
+    "directory": "packages/eslint-config-npack-app"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/express-ts/create-npack-app/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint": "6.x",
+    "eslint-plugin-flowtype": "3.x || 4.x",
+    "eslint-plugin-import": "2.x"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "1.0.9"
+  }
+}

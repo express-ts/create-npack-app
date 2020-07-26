@@ -4,14 +4,14 @@ title: Proxying API Requests in Development
 sidebar_label: Proxying in Development
 ---
 
-> Note: this feature is available with `react-scripts@0.2.3` and higher.
+> Note: this feature is available with `npack-scripts@0.2.3` and higher.
 
-People often serve the front-end React app from the same host and port as their backend implementation.
+People often serve the front-end Node.js app from the same host and port as their backend implementation.
 
 For example, a production setup might look like this after the app is deployed:
 
-    /             - static server returns index.html with React app
-    /todos        - static server returns index.html with React app
+    /             - static server returns index.html with @express app
+    /todos        - static server returns index.html with @express app
     /api/todos    - server handles any /api/* requests using the backend implementation
 
 Such setup is **not** required. However, if you **do** have a setup like this, it is convenient to write requests like `fetch('/api/todos')` without worrying about redirecting them to another host or port during development.
@@ -68,7 +68,7 @@ We don’t recommend this approach.
 
 ## Configuring the Proxy Manually
 
-> Note: this feature is available with `react-scripts@2.0.0` and higher.
+> Note: this feature is available with `npack-scripts@2.0.0` and higher.
 
 If the `proxy` option is **not** flexible enough for you, you can get direct access to the Express app instance and hook up your own proxy middleware.
 
