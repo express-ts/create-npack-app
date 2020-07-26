@@ -4,7 +4,7 @@
 
 ## 1.1.5 (August 24, 2018)
 
-- `react-scripts`
+- `npack-scripts`
 
   - Update the `webpack-dev-server` dependency
 
@@ -22,13 +22,13 @@
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.5
+npm install --save --save-exact npack-scripts@1.1.5
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.5
+yarn add --exact npack-scripts@1.1.5
 ```
 
 ## 1.1.4 (April 3, 2018)
@@ -48,20 +48,20 @@ yarn add --exact react-scripts@1.1.5
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.4
+npm install --save --save-exact npack-scripts@1.1.4
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.4
+yarn add --exact npack-scripts@1.1.4
 ```
 
 ## 1.1.3 (April 3, 2018)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#4247](https://github.com/facebook/create-react-app/pull/4247) Fix `environment.dispose is not a function` error caused by a Jest bug. ([@gaearon](https://github.com/gaearon))
 
@@ -74,26 +74,26 @@ yarn add --exact react-scripts@1.1.4
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.3
+npm install --save --save-exact npack-scripts@1.1.3
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.3
+yarn add --exact npack-scripts@1.1.3
 ```
 
 ## 1.1.2 (April 3, 2018)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#4085](https://github.com/facebook/create-react-app/pull/4085) Resolve `.js` before `.mjs` files to unbreak dependencies with native ESM support. ([@leebyron](https://github.com/leebyron))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#4197](https://github.com/facebook/create-react-app/pull/4197) Add troubleshooting for Github Pages. ([@xnt](https://github.com/xnt))
 
@@ -107,36 +107,36 @@ yarn add --exact react-scripts@1.1.3
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.2
+npm install --save --save-exact npack-scripts@1.1.2
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.2
+yarn add --exact npack-scripts@1.1.2
 ```
 
 ## 1.1.1 (February 2, 2018)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
   - [#4000](https://github.com/facebook/create-react-app/pull/4000) Fix escaping `$` in environment variables. ([@iansu](https://github.com/iansu))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
   - [#4006](https://github.com/facebook/create-react-app/pull/4006) Add Node 9 compatibility for `fsevents`. ([@gaearon](https://github.com/gaearon))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
   - [#3971](https://github.com/facebook/create-react-app/pull/3971) Update instructions for continuous delivery with Netlify. ([@hubgit](https://github.com/hubgit))
   - [#3894](https://github.com/facebook/create-react-app/pull/3894) Include `{json,css}` files in prettier command. ([@reyronald](https://github.com/reyronald))
 
 #### :house: Internal
 
-- `create-react-app`
+- `create-npack-app`
   - [#3853](https://github.com/facebook/create-react-app/pull/3853) pin envinfo version to 3.4.2. ([@bondz](https://github.com/bondz))
 
 #### Committers: 6
@@ -152,20 +152,20 @@ yarn add --exact react-scripts@1.1.2
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.1
+npm install --save --save-exact npack-scripts@1.1.1
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.1
+yarn add --exact npack-scripts@1.1.1
 ```
 
 ## 1.1.0 (January 15, 2018)
 
 #### :rocket: New Feature
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3387](https://github.com/facebook/create-react-app/pull/3387) Add support for variable expansion in `.env` files. ([@moos](https://github.com/moos))
 
@@ -173,7 +173,7 @@ yarn add --exact react-scripts@1.1.1
 
   - [#3474](https://github.com/facebook/create-react-app/pull/3474) Allow the error overlay to be unregistered. ([@Timer](https://github.com/Timer))
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#3408](https://github.com/facebook/create-react-app/pull/3408) Add `--info` flag to help gather bug reports. ([@tabrindle](https://github.com/tabrindle))
   - [#3409](https://github.com/facebook/create-react-app/pull/3409) Add `--use-npm` flag to bypass Yarn even on systems that have it. ([@tabrindle](https://github.com/tabrindle))
@@ -182,7 +182,7 @@ yarn add --exact react-scripts@1.1.1
 
 #### :bug: Bug Fix
 
-- `babel-preset-react-app`, `react-scripts`
+- `babel-preset-react-app`, `npack-scripts`
 
   - [#3788](https://github.com/facebook/create-react-app/pull/3788) Fix object destructuring inside an array on Node 6. ([@gaearon](https://github.com/gaearon))
 
@@ -194,24 +194,24 @@ yarn add --exact react-scripts@1.1.1
   - [#2071](https://github.com/facebook/create-react-app/pull/2071) Fix broken console clearing on Windows. ([@danielverejan](https://github.com/danielverejan))
   - [#3686](https://github.com/facebook/create-react-app/pull/3686) Fix starting a project in directory with `++` in the name. ([@Norris1z](https://github.com/Norris1z))
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#3320](https://github.com/facebook/create-react-app/pull/3320) Fix offline installation to respect proxy from `.npmrc`. ([@mdogadailo](https://github.com/mdogadailo))
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3537](https://github.com/facebook/create-react-app/pull/3537) Add `mjs` and `jsx` filename extensions to `file-loader` exclude pattern. ([@iansu](https://github.com/iansu))
   - [#3511](https://github.com/facebook/create-react-app/pull/3511) Unmount the component in the default generated test. ([@gaearon](https://github.com/gaearon))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3730](https://github.com/facebook/create-react-app/pull/3730) Print when `HOST` environment variable is set. ([@iansu](https://github.com/iansu))
   - [#3455](https://github.com/facebook/create-react-app/pull/3455) Add a localhost-only log message pointing folks to the PWA docs. ([@jeffposnick](https://github.com/jeffposnick))
   - [#3416](https://github.com/facebook/create-react-app/pull/3416) Improve eject message. ([@xjlim](https://github.com/xjlim))
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#3740](https://github.com/facebook/create-react-app/pull/3740) Allow more non-conflicting files in initial project directory. ([@GreenGremlin](https://github.com/GreenGremlin))
 
@@ -226,7 +226,7 @@ yarn add --exact react-scripts@1.1.1
 
   - [#3465](https://github.com/facebook/create-react-app/pull/3465) Open editor to exact column from build error overlay. ([@tharakawj](https://github.com/tharakawj))
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#3721](https://github.com/facebook/create-react-app/pull/3721) Support setting `none` in `REACT_EDITOR` environment variable. ([@raerpo](https://github.com/raerpo))
 
@@ -243,7 +243,7 @@ yarn add --exact react-scripts@1.1.1
   - [#3656](https://github.com/facebook/create-react-app/pull/3656) Better documentation for setupTests.js when ejecting. ([@dannycalleri](https://github.com/dannycalleri))
   - [#1791](https://github.com/facebook/create-react-app/pull/1791) Add link for automatic deployment to azure. ([@ulrikstrid](https://github.com/ulrikstrid))
   - [#3717](https://github.com/facebook/create-react-app/pull/3717) Update README.md. ([@maecapozzi](https://github.com/maecapozzi))
-  - [#3710](https://github.com/facebook/create-react-app/pull/3710) Link to an explanation for forking react-scripts. ([@gaearon](https://github.com/gaearon))
+  - [#3710](https://github.com/facebook/create-react-app/pull/3710) Link to an explanation for forking npack-scripts. ([@gaearon](https://github.com/gaearon))
   - [#3709](https://github.com/facebook/create-react-app/pull/3709) Document adding a router. ([@gaearon](https://github.com/gaearon))
   - [#3670](https://github.com/facebook/create-react-app/pull/3670) Fix typo in the User Guide. ([@qbahers](https://github.com/qbahers))
   - [#3645](https://github.com/facebook/create-react-app/pull/3645) Update README.md. ([@elie222](https://github.com/elie222))
@@ -338,26 +338,26 @@ yarn add --exact react-scripts@1.1.1
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.1.0
+npm install --save --save-exact npack-scripts@1.1.0
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.1.0
+yarn add --exact npack-scripts@1.1.0
 ```
 
 ## 1.0.17 (November 3, 2017)
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3401](https://github.com/facebook/create-react-app/pull/3401) Stop using a deprecated option. ([@gaearon](https://github.com/gaearon))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3399](https://github.com/facebook/create-react-app/pull/3399) Add link to VS Code troubleshooting guide. ([@auchenberg](https://github.com/auchenberg))
   - [#3400](https://github.com/facebook/create-react-app/pull/3400) Update VS Code debug configuration. ([@auchenberg](https://github.com/auchenberg))
@@ -373,20 +373,20 @@ yarn add --exact react-scripts@1.1.0
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.17
+npm install --save --save-exact npack-scripts@1.0.17
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.17
+yarn add --exact npack-scripts@1.0.17
 ```
 
 ## 1.0.16 (October 31, 2017) 🎃
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3374](https://github.com/facebook/create-react-app/pull/3374) Set correct image type and sizes in `manifest.json`. ([@piotr-cz](https://github.com/piotr-cz))
 
@@ -404,35 +404,35 @@ yarn add --exact react-scripts@1.0.17
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.16
+npm install --save --save-exact npack-scripts@1.0.16
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.16
+yarn add --exact npack-scripts@1.0.16
 ```
 
 ## 1.0.15 (October 30, 2017)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3287](https://github.com/facebook/create-react-app/pull/3287) Fix favicon sizes value in the project manifest. ([@ryansully](https://github.com/ryansully))
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#3230](https://github.com/facebook/create-react-app/pull/3230) Fix watching for changes in `src/node_modules`. ([@xjlim](https://github.com/xjlim))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3239](https://github.com/facebook/create-react-app/pull/3239) Allow importing `.mjs` files. ([@Timer](https://github.com/Timer))
   - [#3340](https://github.com/facebook/create-react-app/pull/3340) Polyfill `requestAnimationFrame` in test environment. ([@gaearon](https://github.com/gaearon))
 
-- `babel-preset-react-app`, `react-dev-utils`, `react-error-overlay`, `react-scripts`
+- `babel-preset-react-app`, `react-dev-utils`, `react-error-overlay`, `npack-scripts`
 
   - [#3342](https://github.com/facebook/create-react-app/pull/3342) Bump dependencies. ([@gaearon](https://github.com/gaearon))
 
@@ -440,7 +440,7 @@ yarn add --exact react-scripts@1.0.16
 
   - [#3100](https://github.com/facebook/create-react-app/pull/3100) Add click-to-open support for build errors. ([@tharakawj](https://github.com/tharakawj))
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#3355](https://github.com/facebook/create-react-app/pull/3355) Add preflight CWD check for npm to detect bad Windows setups. ([@gaearon](https://github.com/gaearon))
 
@@ -478,7 +478,7 @@ yarn add --exact react-scripts@1.0.16
   - [#3263](https://github.com/facebook/create-react-app/pull/3263) `react-error-overlay` has no dependencies now (it's bundled). ([@Timer](https://github.com/Timer))
   - [#3142](https://github.com/facebook/create-react-app/pull/3142) Make error overlay run in the context of the iframe. ([@tharakawj](https://github.com/tharakawj))
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3150](https://github.com/facebook/create-react-app/pull/3150) Remove an useless negation in `registerServiceWorker.js`. ([@dunglas](https://github.com/dunglas))
   - [#3158](https://github.com/facebook/create-react-app/pull/3158) Remove `output.path` from dev webpack config. ([@nikolas](https://github.com/nikolas))
@@ -520,13 +520,13 @@ yarn add --exact react-scripts@1.0.16
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.15
+npm install --save --save-exact npack-scripts@1.0.15
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.15
+yarn add --exact npack-scripts@1.0.15
 ```
 
 ## 1.0.14 (September 26, 2017)
@@ -555,7 +555,7 @@ yarn add --exact react-scripts@1.0.15
 
   - [#3163](https://github.com/facebook/create-react-app/pull/3163) Add link to active CSS modules discussion. ([@NeekSandhu](https://github.com/NeekSandhu))
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2908](https://github.com/facebook/create-react-app/pull/2908) Note that class fields have progressed to stage 3. ([@rickbeerendonk](https://github.com/rickbeerendonk))
 
@@ -567,7 +567,7 @@ yarn add --exact react-scripts@1.0.15
 
 #### :house: Internal
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3157](https://github.com/facebook/create-react-app/pull/3157) Update `webpack-dev-server` to `2.8.2`. ([@nikolas](https://github.com/nikolas))
 
@@ -579,7 +579,7 @@ yarn add --exact react-scripts@1.0.15
 
   - [#3102](https://github.com/facebook/create-react-app/pull/3102) Clean target directory before compiling overlay. ([@Timer](https://github.com/Timer))
 
-- `create-react-app`, `react-dev-utils`, `react-error-overlay`, `react-scripts`
+- `create-npack-app`, `react-dev-utils`, `react-error-overlay`, `npack-scripts`
 
   - [#3058](https://github.com/facebook/create-react-app/pull/3058) Re-run prettier for all files and pin the version. ([@viankakrisna](https://github.com/viankakrisna))
 
@@ -605,13 +605,13 @@ yarn add --exact react-scripts@1.0.15
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.14
+npm install --save --save-exact npack-scripts@1.0.14
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.14
+yarn add --exact npack-scripts@1.0.14
 ```
 
 ## 1.0.13 (September 2, 2017)
@@ -626,13 +626,13 @@ yarn add --exact react-scripts@1.0.14
 
   - [#3049](https://github.com/facebook/create-react-app/pull/3049) Print filesize difference for chunks. ([@esturcke](https://github.com/esturcke))
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3046](https://github.com/facebook/create-react-app/pull/3046) Fix crash in development mode on IE11. ([@tharakawj](https://github.com/tharakawj))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#3033](https://github.com/facebook/create-react-app/pull/3033) Add an empty mock for `child_process` to let some libraries compile. ([@McFlurriez](https://github.com/McFlurriez))
 
@@ -654,13 +654,13 @@ yarn add --exact react-scripts@1.0.14
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.13
+npm install --save --save-exact npack-scripts@1.0.13
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.13
+yarn add --exact npack-scripts@1.0.13
 ```
 
 ## 1.0.12 (August 28, 2017)
@@ -676,13 +676,13 @@ yarn add --exact react-scripts@1.0.13
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2917](https://github.com/facebook/create-react-app/pull/2917) Optimize the size of default favicon. ([@sylvainbaronnet](https://github.com/sylvainbaronnet))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2986](https://github.com/facebook/create-react-app/pull/2986) Docs: debugging in WebStorm. ([@prigara](https://github.com/prigara))
   - [#2948](https://github.com/facebook/create-react-app/pull/2948) Remove Modulus from user guide. ([@Zertz](https://github.com/Zertz))
@@ -694,11 +694,11 @@ yarn add --exact react-scripts@1.0.13
 
 #### :house: Internal
 
-- `react-error-overlay`, `react-scripts`
+- `react-error-overlay`, `npack-scripts`
 
   - [#2991](https://github.com/facebook/create-react-app/pull/2991) Update `babel-runtime` dependency ([@christophehurpeau](https://github.com/christophehurpeau))
 
-- `react-dev-utils`, `react-error-overlay`, `react-scripts`
+- `react-dev-utils`, `react-error-overlay`, `npack-scripts`
 
   - [#2515](https://github.com/facebook/create-react-app/pull/2515) Convert `react-error-overlay` to React ([@tharakawj](https://github.com/tharakawj))
 
@@ -719,13 +719,13 @@ yarn add --exact react-scripts@1.0.13
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.12
+npm install --save --save-exact npack-scripts@1.0.12
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.12
+yarn add --exact npack-scripts@1.0.12
 ```
 
 **Note:** there’s a [known issue](https://github.com/facebook/create-react-app/issues/3041) that might cause the project to not compile after upgrading. In this case, migrate straight to `1.0.13` which doesn’t have this issue.
@@ -734,7 +734,7 @@ yarn add --exact react-scripts@1.0.12
 
 #### :bug: Bug Fix
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#2884](https://github.com/facebook/create-react-app/pull/2884) Improve offline heuristic for proxied environments. ([@bsyk](https://github.com/bsyk))
 
@@ -748,35 +748,35 @@ yarn add --exact react-scripts@1.0.12
 
     Elements printed in their entirety would sometimes render as HTML. This should no longer happen and should properly render as text.
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
   - [#2834](https://github.com/facebook/create-react-app/pull/2834) Make `formatWebpackMessages` return all messages ([@onigoetz](https://github.com/onigoetz))
-- `react-scripts`
+- `npack-scripts`
   - [#2806](https://github.com/facebook/create-react-app/pull/2806) Fix SockJS version compatibility. ([@christianbundy](https://github.com/christianbundy))
   - [#2738](https://github.com/facebook/create-react-app/pull/2738) Fix Jest `node` file resolution. ([@mostafah](https://github.com/mostafah))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2818](https://github.com/facebook/create-react-app/pull/2818) Allow sourcemaps to be disabled. ([@viankakrisna](https://github.com/viankakrisna))
 
     As applications grow more complex, it is possible webpack may run out of memory while generating source maps. They may now be disabled by setting `GENERATE_SOURCEMAP=false`.
 
-  - [#2913](https://github.com/facebook/create-react-app/pull/2913) Allow flags to be passed to node when running `react-scripts`. ([@koistya](https://github.com/koistya))
+  - [#2913](https://github.com/facebook/create-react-app/pull/2913) Allow flags to be passed to node when running `npack-scripts`. ([@koistya](https://github.com/koistya))
   - [#2574](https://github.com/facebook/create-react-app/pull/2574) Upgrade to `webpack@3`. ([@themre](https://github.com/themre))
   - [#2747](https://github.com/facebook/create-react-app/pull/2747) Simplify webpack configuration using `Rule.oneOf`. ([@Furizaa](https://github.com/Furizaa))
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
   - [#2468](https://github.com/facebook/create-react-app/pull/2468) Allow importing `package.json`. ([@iamdoron](https://github.com/iamdoron))
   - [#2650](https://github.com/facebook/create-react-app/pull/2650) Make UglifyJS error friendlier. ([@viankakrisna](https://github.com/viankakrisna))
-- `create-react-app`
+- `create-npack-app`
   - [#2785](https://github.com/facebook/create-react-app/pull/2785) Change error wording and list conflicting files when initializing app. ([@OwenFlood](https://github.com/OwenFlood))
 - `react-dev-utils`
   - [#2761](https://github.com/facebook/create-react-app/pull/2761) Don't prompt to install serve if already installed. ([@OwenFlood](https://github.com/OwenFlood))
   - [#2754](https://github.com/facebook/create-react-app/pull/2754) Auto-detect JetBrains IDEs. ([@danrr](https://github.com/danrr))
   - [#2740](https://github.com/facebook/create-react-app/pull/2740) Support PyCharm in `launchEditor`. ([@danrr](https://github.com/danrr))
   - [#2723](https://github.com/facebook/create-react-app/pull/2723) Reorder vim arguments in `launchEditor` so `--remote` works. ([@trygveaa](https://github.com/trygveaa))
-- `eslint-config-react-app`, `react-scripts`
+- `eslint-config-react-app`, `npack-scripts`
   - [#2735](https://github.com/facebook/create-react-app/pull/2735) Upgrade to `eslint@4`. ([@trungdq88](https://github.com/trungdq88))
 - `eslint-config-react-app`
   - [#2701](https://github.com/facebook/create-react-app/pull/2701) Set `allowTaggedTemplates` to true (eslint). ([@denkristoffer](https://github.com/denkristoffer))
@@ -789,7 +789,7 @@ yarn add --exact react-scripts@1.0.12
   - [#2697](https://github.com/facebook/create-react-app/pull/2697) Fix env list ordering. ([@alexeyraspopov](https://github.com/alexeyraspopov))
 - `react-dev-utils`
   - [#2798](https://github.com/facebook/create-react-app/pull/2798) Update note about `webpackHotDevClient` support. ([@ForbesLindesay](https://github.com/ForbesLindesay))
-- `react-scripts`
+- `npack-scripts`
   - [#2822](https://github.com/facebook/create-react-app/pull/2822) Add explicit "Opting Out of Caching" header. ([@gaearon](https://github.com/gaearon))
   - [#2725](https://github.com/facebook/create-react-app/pull/2725) Fixed typo. ([@zeel](https://github.com/zeel))
   - [#2668](https://github.com/facebook/create-react-app/pull/2668) Document `basename` feature in `react-router`. ([@viankakrisna](https://github.com/viankakrisna))
@@ -799,13 +799,13 @@ yarn add --exact react-scripts@1.0.12
 
 #### :house: Internal
 
-- `create-react-app`, `eslint-config-react-app`, `react-dev-utils`, `react-error-overlay`, `react-scripts`
+- `create-npack-app`, `eslint-config-react-app`, `react-dev-utils`, `react-error-overlay`, `npack-scripts`
   - [#2923](https://github.com/facebook/create-react-app/pull/2923) Update deps. ([@Timer](https://github.com/Timer))
 - `eslint-config-react-app`
   - [#2718](https://github.com/facebook/create-react-app/pull/2718) Re-enable flowtype warning. ([@oskarkook](https://github.com/oskarkook))
 - Other
   - [#2700](https://github.com/facebook/create-react-app/pull/2700) Unstage `yarn.lock` pre-commit. ([@jdcrensh](https://github.com/jdcrensh))
-- `react-scripts`
+- `npack-scripts`
   - [#2873](https://github.com/facebook/create-react-app/pull/2873) Use template strings. ([@monkindey](https://github.com/monkindey))
 
 #### Committers: 26
@@ -842,13 +842,13 @@ yarn add --exact react-scripts@1.0.12
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.11
+npm install --save --save-exact npack-scripts@1.0.11
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.11
+yarn add --exact npack-scripts@1.0.11
 ```
 
 ## 1.0.10 (June 29, 2017)
@@ -859,7 +859,7 @@ yarn add --exact react-scripts@1.0.11
 
   - [#2692](https://github.com/facebook/create-react-app/pull/2692) Fix IE11 crash in development. ([@pdhoopr](https://github.com/pdhoopr))
 
-- `create-react-app`
+- `create-npack-app`
   - [#2683](https://github.com/facebook/create-react-app/pull/2683) Fix a typo. ([@BenBrostoff](https://github.com/BenBrostoff))
 
 #### :memo: Documentation
@@ -881,26 +881,26 @@ yarn add --exact react-scripts@1.0.11
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.10
+npm install --save --save-exact npack-scripts@1.0.10
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.10
+yarn add --exact npack-scripts@1.0.10
 ```
 
 ## 1.0.9 (June 29, 2017)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2680](https://github.com/facebook/create-react-app/pull/2680) Fix external CSS imports. ([@gaearon](https://github.com/gaearon))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2679](https://github.com/facebook/create-react-app/pull/2679) Fix minor typo. ([@dbanck](https://github.com/dbanck))
   - [#2666](https://github.com/facebook/create-react-app/pull/2666) Add more info about Apache client side routing. ([@viankakrisna](https://github.com/viankakrisna))
@@ -926,20 +926,20 @@ yarn add --exact react-scripts@1.0.10
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save --save-exact react-scripts@1.0.9
+npm install --save --save-exact npack-scripts@1.0.9
 ```
 
 or
 
 ```sh
-yarn add --exact react-scripts@1.0.9
+yarn add --exact npack-scripts@1.0.9
 ```
 
 ## 1.0.8 (June 28, 2017)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2550](https://github.com/facebook/create-react-app/pull/2550) Fix Node 8 compatibility. ([@josephfrazier](https://github.com/josephfrazier))
   - [#2610](https://github.com/facebook/create-react-app/pull/2610) Fix sourcemap directory organization on Windows. ([@plusCubed](https://github.com/plusCubed))
@@ -955,7 +955,7 @@ yarn add --exact react-scripts@1.0.9
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2648](https://github.com/facebook/create-react-app/pull/2648) Warn about large bundle sizes. ([@gaearon](https://github.com/gaearon))
   - [#2511](https://github.com/facebook/create-react-app/pull/2511) Support `.web.js` extension for React Native Web. ([@mini-eggs](https://github.com/mini-eggs))
@@ -966,13 +966,13 @@ yarn add --exact react-scripts@1.0.9
   - [#2458](https://github.com/facebook/create-react-app/pull/2458) Add names to module factories in development. ([@Zaccc123](https://github.com/Zaccc123))
   - [#2551](https://github.com/facebook/create-react-app/pull/2551) In new projects, unregister service worker and force reload if `service-worker.js` is not found. ([@ro-savage](https://github.com/ro-savage))
 
-- `babel-preset-react-app`, `react-dev-utils`, `react-scripts`
+- `babel-preset-react-app`, `react-dev-utils`, `npack-scripts`
 
   - [#2658](https://github.com/facebook/create-react-app/pull/2658) Bump dependencies. ([@gaearon](https://github.com/gaearon))
 
-- `create-react-app`, `react-scripts`
+- `create-npack-app`, `npack-scripts`
 
-  - [#2657](https://github.com/facebook/create-react-app/pull/2657) Put `react-scripts` in `dependencies`, not `devDependencies`. ([@gaearon](https://github.com/gaearon))
+  - [#2657](https://github.com/facebook/create-react-app/pull/2657) Put `npack-scripts` in `dependencies`, not `devDependencies`. ([@gaearon](https://github.com/gaearon))
   - [#2635](https://github.com/facebook/create-react-app/pull/2635) Silence unhelpful npm warnings. ([@gaearon](https://github.com/gaearon))
 
 - `react-dev-utils`
@@ -984,7 +984,7 @@ yarn add --exact react-scripts@1.0.9
   - [#2518](https://github.com/facebook/create-react-app/pull/2518) Warn when trying to run on port below 1024 without admin permissions under Linux/macOS. ([@levrik](https://github.com/levrik))
   - [#2385](https://github.com/facebook/create-react-app/pull/2385) Suggest just `yarn build` in output. ([@gaearon](https://github.com/gaearon))
 
-- `create-react-app`
+- `create-npack-app`
 
   - [#1945](https://github.com/facebook/create-react-app/pull/1945) Fix grammar in CLI output. ([@ColinEberhardt](https://github.com/ColinEberhardt))
 
@@ -1032,7 +1032,7 @@ yarn add --exact react-scripts@1.0.9
   - [#2388](https://github.com/facebook/create-react-app/pull/2388) Fix wrong path expansion in end-to-end test. ([@gaearon](https://github.com/gaearon))
   - [#2387](https://github.com/facebook/create-react-app/pull/2387) Catch "No tests found" during CI. ([@EnoahNetzach](https://github.com/EnoahNetzach))
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2408](https://github.com/facebook/create-react-app/pull/2408) E2E testing enhancements. ([@EnoahNetzach](https://github.com/EnoahNetzach))
   - [#2430](https://github.com/facebook/create-react-app/pull/2430) Remove an unnecessary webpack option. ([@andykenward](https://github.com/andykenward))
@@ -1095,20 +1095,20 @@ yarn add --exact react-scripts@1.0.9
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.8
+npm install --save-dev --save-exact npack-scripts@1.0.8
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.8
+yarn add --dev --exact npack-scripts@1.0.8
 ```
 
 **If you previously used `HTTPS=true` environment variable in development**, make sure you aren't affected by a now-fixed vulnerability in webpack by [visiting this page](http://badcert.mike.works/). You can read more about the vulnerability [here](https://medium.com/@mikenorth/webpack-preact-cli-vulnerability-961572624c54).
 
-You may optionally then move `react-scripts` from `devDependencies` to `dependencies` since that’s how we’ll structure newly created projects. It is not necessary though.
+You may optionally then move `npack-scripts` from `devDependencies` to `dependencies` since that’s how we’ll structure newly created projects. It is not necessary though.
 
-If you left the service worker integration enabled and didn’t change how it works, you can replace `src/registerServiceWorker.js` with [this updated version](https://raw.githubusercontent.com/facebook/create-react-app/895c475d3fc218c65dcac9a3ef3f2c0ea746a1ed/packages/react-scripts/template/src/registerServiceWorker.js).
+If you left the service worker integration enabled and didn’t change how it works, you can replace `src/registerServiceWorker.js` with [this updated version](https://raw.githubusercontent.com/express-ts/create-npack-app/895c475d3fc218c65dcac9a3ef3f2c0ea746a1ed/packages/npack-scripts/template/src/registerServiceWorker.js).
 
 If you haven't changed the default CSS organization, you may want to apply [this fix](https://github.com/facebook/create-react-app/pull/2470/files) that makes `index.css` take precedence over `App.css` in your project.
 
@@ -1116,26 +1116,26 @@ If you haven't changed the default CSS organization, you may want to apply [this
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2382](https://github.com/facebook/create-react-app/pull/2382) Consistently set environment variables. ([@gaearon](https://github.com/gaearon))
   - [#2379](https://github.com/facebook/create-react-app/pull/2379) Temporarily disable `comparisons` feature in uglify compression. ([@davidascher](https://github.com/davidascher))
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2383](https://github.com/facebook/create-react-app/pull/2383) Update webpack to 2.6.1. ([@gaearon](https://github.com/gaearon))
   - [#2349](https://github.com/facebook/create-react-app/pull/2349) Update webpack to v2.6.0. ([@ingro](https://github.com/ingro))
   - [#2351](https://github.com/facebook/create-react-app/pull/2351) Removed the overriding of `reduce_vars` since webpack v2.6.0 included fix of Uglify. ([@Zaccc123](https://github.com/Zaccc123))
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#2361](https://github.com/facebook/create-react-app/pull/2361) Print file sizes with correct build folder path. ([@fezhengjin](https://github.com/fezhengjin))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2372](https://github.com/facebook/create-react-app/pull/2372) Update README.md for `now` deployments. ([@purplecones](https://github.com/purplecones))
   - [#2350](https://github.com/facebook/create-react-app/pull/2350) Fix broken links. ([@gaearon](https://github.com/gaearon))
@@ -1154,20 +1154,20 @@ If you haven't changed the default CSS organization, you may want to apply [this
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.7
+npm install --save-dev --save-exact npack-scripts@1.0.7
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.7
+yarn add --dev --exact npack-scripts@1.0.7
 ```
 
 ## 1.0.6 (May 24, 2017)
 
 #### :bug: Bug Fix
 
-- `eslint-config-react-app`, `react-error-overlay`, `react-scripts`
+- `eslint-config-react-app`, `react-error-overlay`, `npack-scripts`
 
   - [#2346](https://github.com/facebook/create-react-app/pull/2346) Resolve Flow errors in an ESLint plugin. ([@iainbeeston](https://github.com/iainbeeston))
 
@@ -1177,7 +1177,7 @@ yarn add --dev --exact react-scripts@1.0.7
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2347](https://github.com/facebook/create-react-app/pull/2347) Don't precache `/__*` URLs to fix Firebase hosting. ([@ryansully](https://github.com/ryansully))
 
@@ -1199,20 +1199,20 @@ yarn add --dev --exact react-scripts@1.0.7
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.6
+npm install --save-dev --save-exact npack-scripts@1.0.6
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.6
+yarn add --dev --exact npack-scripts@1.0.6
 ```
 
 ## 1.0.5 (May 22, 2017)
 
 #### :bug: Bug Fix
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#2326](https://github.com/facebook/create-react-app/pull/2326) Files in `public/` folder should not be requested through proxy. ([@gaearon](https://github.com/gaearon))
 
@@ -1228,7 +1228,7 @@ yarn add --dev --exact react-scripts@1.0.6
 
 #### :house: Internal
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#2320](https://github.com/facebook/create-react-app/pull/2320) Remove unnecessary dependencies. ([@pmadar](https://github.com/pmadar))
 
@@ -1242,13 +1242,13 @@ yarn add --dev --exact react-scripts@1.0.6
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.5
+npm install --save-dev --save-exact npack-scripts@1.0.5
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.5
+yarn add --dev --exact npack-scripts@1.0.5
 ```
 
 ## 1.0.4 (May 22, 2017)
@@ -1263,13 +1263,13 @@ yarn add --dev --exact react-scripts@1.0.5
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.4
+npm install --save-dev --save-exact npack-scripts@1.0.4
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.4
+yarn add --dev --exact npack-scripts@1.0.4
 ```
 
 ## 1.0.3 (May 21, 2017)
@@ -1288,7 +1288,7 @@ yarn add --dev --exact react-scripts@1.0.4
 
   - [#2301](https://github.com/facebook/create-react-app/pull/2301) Wrap more `console` calls into a check. ([@BrodaNoel](https://github.com/BrodaNoel))
 
-- `react-scripts`
+- `npack-scripts`
   - [#2314](https://github.com/facebook/create-react-app/pull/2314) Fix a "File not found" false positive. ([@gaearon](https://github.com/gaearon))
 
 #### Committers: 4
@@ -1303,20 +1303,20 @@ yarn add --dev --exact react-scripts@1.0.4
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.3
+npm install --save-dev --save-exact npack-scripts@1.0.3
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.3
+yarn add --dev --exact npack-scripts@1.0.3
 ```
 
 ## 1.0.2 (May 20, 2017)
 
 #### :bug: Bug Fix
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#2276](https://github.com/facebook/create-react-app/pull/2276) Serve a no-op service worker in development to ensure it doesn't cache the production build even if it was served on the same port. ([@jeffposnick](https://github.com/jeffposnick))
 
@@ -1331,14 +1331,14 @@ yarn add --dev --exact react-scripts@1.0.3
 
 #### :nail_care: Enhancement
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2221](https://github.com/facebook/create-react-app/pull/2221) Ejecting should ensure you have clean `git status`. ([@milocosmopolitan](https://github.com/milocosmopolitan))
   - [#2288](https://github.com/facebook/create-react-app/pull/2288) Only enable host check if you use proxy, and add a way to opt out of it. ([@gaearon](https://github.com/gaearon))
 
 #### :house: Internal
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
 
   - [#2283](https://github.com/facebook/create-react-app/pull/2283) Remove unnecessary dependencies(#751). ([@pmadar](https://github.com/pmadar))
 
@@ -1356,22 +1356,22 @@ yarn add --dev --exact react-scripts@1.0.3
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.2
+npm install --save-dev --save-exact npack-scripts@1.0.2
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.2
+yarn add --dev --exact npack-scripts@1.0.2
 ```
 
-If you previously had issues with an `Invalid Host Header` error, [follow these new instructions](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#invalid-host-header-errors-after-configuring-proxy) to fix it.
+If you previously had issues with an `Invalid Host Header` error, [follow these new instructions](https://github.com/express-ts/create-npack-app/blob/master/packages/npack-scripts/template/README.md#invalid-host-header-errors-after-configuring-proxy) to fix it.
 
 ## 1.0.1 (May 19, 2017)
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2242](https://github.com/facebook/create-react-app/pull/2242) Fix `NODE_PATH=src` for `npm start` and `npm run build`. ([@ApacheEx](https://github.com/ApacheEx))
   - [#2261](https://github.com/facebook/create-react-app/pull/2261) Fix `NODE_PATH=src` for Jest. ([@gaearon](https://github.com/gaearon))
@@ -1397,12 +1397,12 @@ If you previously had issues with an `Invalid Host Header` error, [follow these 
 
   - [#2256](https://github.com/facebook/create-react-app/pull/2256) Turn off `operator-assignment` stylistic rule. ([@gaearon](https://github.com/gaearon))
 
-- `react-scripts`
+- `npack-scripts`
   - [#2224](https://github.com/facebook/create-react-app/pull/2224) Add `<noscript>` to template's `index.html`. ([@viankakrisna](https://github.com/viankakrisna))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2259](https://github.com/facebook/create-react-app/pull/2259) Fix broken links. ([@enguerran](https://github.com/enguerran))
   - [#2258](https://github.com/facebook/create-react-app/pull/2258) Update readme with example of Sass include path. ([@kellyrmilligan](https://github.com/kellyrmilligan))
@@ -1411,7 +1411,7 @@ If you previously had issues with an `Invalid Host Header` error, [follow these 
 
 #### :house: Internal
 
-- `react-scripts`
+- `npack-scripts`
 
   - [#2264](https://github.com/facebook/create-react-app/pull/2264) Fix a bug for empty `NODE_PATH`. ([@gaearon](https://github.com/gaearon))
 
@@ -1432,13 +1432,13 @@ If you previously had issues with an `Invalid Host Header` error, [follow these 
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.1
+npm install --save-dev --save-exact npack-scripts@1.0.1
 ```
 
 or
 
 ```sh
-yarn add --dev --exact react-scripts@1.0.1
+yarn add --dev --exact npack-scripts@1.0.1
 ```
 
 ## 1.0.0 (May 18, 2017)
@@ -1446,7 +1446,7 @@ yarn add --dev --exact react-scripts@1.0.1
 We’ve been working on this release for the past few months, and there are many big improvements, from migrating to webpack 2 to a brand new runtime error overlay and built-in support for Progressive Web Apps.
 
 So instead of just enumerating them here, we decided to write a blog post about all the new features.<br>
-Check it out: **[What’s New in Create React App](https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html)**.
+Check it out: **[What’s New in Create Npack App](https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-npack-app.html)**.
 
 Have you read it? Now let's see how to update your app to the latest version.
 
@@ -1457,13 +1457,13 @@ First, ensure you are using the latest [Node 6 LTS or newer](https://nodejs.org/
 Inside any created project that has not been ejected, run:
 
 ```sh
-npm install --save-dev --save-exact react-scripts@1.0.0
+npm install --save-dev --save-exact npack-scripts@1.0.0
 ```
 
 You may also optionally update the global command-line utility for bug fixes:
 
 ```sh
-npm install -g create-react-app
+npm install -g create-npack-app
 ```
 
 #### Ensure application and test files reside in `src/`
@@ -1572,7 +1572,7 @@ If you still have the problem please file an issue.
 
 Unhandled Promise rejections will now crash tests. You can fix them by explicitly catching the errors you don’t care about.
 
-#### How to turn my app into a [Progressive Web App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)?
+#### How to turn my app into a [Progressive Web App](https://github.com/express-ts/create-npack-app/blob/master/packages/npack-scripts/template/README.md#making-a-progressive-web-app)?
 
 After the regular update procedure above, add these line to `<head>` in `public/index.html`:
 
@@ -1598,7 +1598,7 @@ Then create a file called `public/manifest.json` that looks like this:
 ```js
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Create Npack App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -1613,7 +1613,7 @@ Then create a file called `public/manifest.json` that looks like this:
 }
 ```
 
-Finally, create `src/registerServiceWorker.js` with [this template](https://github.com/facebook/create-react-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/react-scripts/template/src/registerServiceWorker.js), [import it](https://github.com/facebook/create-react-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/react-scripts/template/src/index.js#L4) from `src/index.js` and [call the function it exports](https://github.com/facebook/create-react-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/react-scripts/template/src/index.js#L8).
+Finally, create `src/registerServiceWorker.js` with [this template](https://github.com/express-ts/create-npack-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/npack-scripts/template/src/registerServiceWorker.js), [import it](https://github.com/express-ts/create-npack-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/npack-scripts/template/src/index.js#L4) from `src/index.js` and [call the function it exports](https://github.com/express-ts/create-npack-app/blob/bf9eca25f519c73f69cff20ac49ce9500e578fe0/packages/npack-scripts/template/src/index.js#L8).
 
 #### Anything missing?
 
@@ -1623,13 +1623,13 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
 
 ### Detailed Changelog
 
-**For a readable summary of the changes, [check out our blog post](https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-react-app.html).**
+**For a readable summary of the changes, [check out our blog post](https://facebook.github.io/react/blog/2017/05/18/whats-new-in-create-npack-app.html).**
 
 #### :boom: Breaking Change
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
   - [#2189](https://github.com/facebook/create-react-app/pull/2189) Add `ModuleScopePlugin` to ensure files reside in `src/`. ([@Timer](https://github.com/Timer))
-- `react-scripts`
+- `npack-scripts`
   - [#2187](https://github.com/facebook/create-react-app/pull/2187) Ignore Moment.js locales by default. ([@gaearon](https://github.com/gaearon))
   - [#1808](https://github.com/facebook/create-react-app/pull/1808) Only run tests in `src/` (#544). ([@motevets](https://github.com/motevets))
   - [#1771](https://github.com/facebook/create-react-app/pull/1771) Some flexbox bugs are autofixed, and support for 2009 spec is dropped. ([@cr101](https://github.com/cr101))
@@ -1637,31 +1637,31 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
   - [#1305](https://github.com/facebook/create-react-app/pull/1305) Whitelist files that can be embedded through url-loader. ([@pugnascotia](https://github.com/pugnascotia))
 - `eslint-config-react-app`, `react-dev-utils`
   - [#2186](https://github.com/facebook/create-react-app/pull/2186) Tweak lint rules. ([@gaearon](https://github.com/gaearon))
-- `eslint-config-react-app`, `react-error-overlay`, `react-scripts`
+- `eslint-config-react-app`, `react-error-overlay`, `npack-scripts`
   - [#2163](https://github.com/facebook/create-react-app/pull/2163) Upgrade `eslint-plugin-jsx-a11y` and activate more rules. ([@AlmeroSteyn](https://github.com/AlmeroSteyn))
-- `eslint-config-react-app`, `react-scripts`
+- `eslint-config-react-app`, `npack-scripts`
   - [#2130](https://github.com/facebook/create-react-app/pull/2130) Confusing global variables are now blacklisted. ([@doshisid](https://github.com/doshisid))
 
 #### :rocket: New Feature
 
-- `react-scripts`
+- `npack-scripts`
   - [#1728](https://github.com/facebook/create-react-app/pull/1728) Scaffolded applications are now Progressive Web Apps by default. ([@jeffposnick](https://github.com/jeffposnick))
   - [#1344](https://github.com/facebook/create-react-app/pull/1344) Support multiple env configuration files. ([@tuchk4](https://github.com/tuchk4))
   - [#2168](https://github.com/facebook/create-react-app/pull/2168) Enable CSS sourcemaps in production. ([@gaearon](https://github.com/gaearon))
   - [#1830](https://github.com/facebook/create-react-app/pull/1830) Make subset of Jest options overridable. ([@ryansully](https://github.com/ryansully))
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
   - [#1101](https://github.com/facebook/create-react-app/pull/1101) Add `react-error-overlay`, our new crash overlay. ([@Timer](https://github.com/Timer))
   - [#1590](https://github.com/facebook/create-react-app/pull/1590) Support specifying a node script as BROWSER environment variable. ([@GAumala](https://github.com/GAumala))
   - [#1790](https://github.com/facebook/create-react-app/pull/1790) Support multiple proxies in development. ([@jamesblight](https://github.com/jamesblight))
-- `eslint-config-react-app`, `react-scripts`
+- `eslint-config-react-app`, `npack-scripts`
   - [#2163](https://github.com/facebook/create-react-app/pull/2163) Upgrade `eslint-plugin-jsx-a11y` and activate more rules. ([@AlmeroSteyn](https://github.com/AlmeroSteyn))
 
 #### :bug: Bug Fix
 
-- `react-scripts`
+- `npack-scripts`
   - [#2219](https://github.com/facebook/create-react-app/pull/2219) Improve interaction between compile and runtime overlays ([@gaearon](https://github.com/gaearon))
   - [#2200](https://github.com/facebook/create-react-app/pull/2200) Disable Uglify reduce_vars. ([@gaearon](https://github.com/gaearon))
-  - [#2166](https://github.com/facebook/create-react-app/pull/2166) Support hoisting `react-scripts` and add `require.resolve()` to loaders. ([@gaearon](https://github.com/gaearon))
+  - [#2166](https://github.com/facebook/create-react-app/pull/2166) Support hoisting `npack-scripts` and add `require.resolve()` to loaders. ([@gaearon](https://github.com/gaearon))
   - [#2115](https://github.com/facebook/create-react-app/pull/2115) Do not respect `.eslintignore`. ([@Timer](https://github.com/Timer))
   - [#2063](https://github.com/facebook/create-react-app/pull/2063) Ignore yarn cache directory when searching for tests. ([@jmorrell](https://github.com/jmorrell))
   - [#2050](https://github.com/facebook/create-react-app/pull/2050) Name development chunk names. ([@herrstucki](https://github.com/herrstucki))
@@ -1678,7 +1678,7 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
   - [#2076](https://github.com/facebook/create-react-app/pull/2076) `openBrowser` now supports urls with more than one parameter. ([@alisonmonteiro](https://github.com/alisonmonteiro))
   - [#1690](https://github.com/facebook/create-react-app/pull/1690) Fix `openBrowser()` when `BROWSER=open` on macOS. ([@bpierre](https://github.com/bpierre))
   - [#1696](https://github.com/facebook/create-react-app/pull/1696) Fix an edge-case for people with the username `cwd`. ([@chrisdrackett](https://github.com/chrisdrackett))
-- `create-react-app`
+- `create-npack-app`
   - [#1863](https://github.com/facebook/create-react-app/pull/1863) Check internet connectivity with lookup instead of resolve. ([@kdleijer](https://github.com/kdleijer))
   - [#1867](https://github.com/facebook/create-react-app/pull/1867) Show package name in CLI. ([@mkazantsev](https://github.com/mkazantsev))
   - [#1706](https://github.com/facebook/create-react-app/pull/1706) Properly extract package name for installing a tgz of scoped packages. ([@Timer](https://github.com/Timer))
@@ -1689,14 +1689,14 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
 
 #### :nail_care: Enhancement
 
-- `react-dev-utils`, `react-scripts`
+- `react-dev-utils`, `npack-scripts`
   - [#2202](https://github.com/facebook/create-react-app/pull/2202) Refactor and improve build output. ([@gaearon](https://github.com/gaearon))
   - [#2152](https://github.com/facebook/create-react-app/pull/2152) Tweak error and warning output. ([@gaearon](https://github.com/gaearon))
   - [#1772](https://github.com/facebook/create-react-app/pull/1772) Replace prompt function Inquirer.js. (#1767). ([@iansu](https://github.com/iansu))
   - [#1726](https://github.com/facebook/create-react-app/pull/1726) Extract generic build functions to react-dev-utils. ([@viankakrisna](https://github.com/viankakrisna))
 - `react-dev-utils`, `react-error-overlay`
   - [#2201](https://github.com/facebook/create-react-app/pull/2201) Tweak error overlay styles. ([@bvaughn](https://github.com/bvaughn))
-- `react-scripts`
+- `npack-scripts`
   - [#2187](https://github.com/facebook/create-react-app/pull/2187) Ignore Moment.js locales by default. ([@gaearon](https://github.com/gaearon))
   - [#1771](https://github.com/facebook/create-react-app/pull/1771) Adding plugin postcss-flexbugs-fixes and flexbox: 'no-2009' to Autoprefixer. ([@cr101](https://github.com/cr101))
   - [#1614](https://github.com/facebook/create-react-app/pull/1614) Upgrade to Jest ~~19~~ (now 20). ([@rogeliog](https://github.com/rogeliog))
@@ -1708,16 +1708,16 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
   - [#1677](https://github.com/facebook/create-react-app/pull/1677) Add `X-FORWARDED` headers for proxy requests. ([@johann-sonntagbauer](https://github.com/johann-sonntagbauer))
 - `eslint-config-react-app`, `react-dev-utils`
   - [#2186](https://github.com/facebook/create-react-app/pull/2186) Tweak lint rules. ([@gaearon](https://github.com/gaearon))
-- `react-error-overlay`, `react-scripts`
+- `react-error-overlay`, `npack-scripts`
   - [#2171](https://github.com/facebook/create-react-app/pull/2171) Use Jest 20. ([@gaearon](https://github.com/gaearon))
-- `babel-preset-react-app`, `eslint-config-react-app`, `react-dev-utils`, `react-error-overlay`, `react-scripts`
+- `babel-preset-react-app`, `eslint-config-react-app`, `react-dev-utils`, `react-error-overlay`, `npack-scripts`
   - [#2170](https://github.com/facebook/create-react-app/pull/2170) Bump dependencies. ([@gaearon](https://github.com/gaearon))
 - `eslint-config-react-app`
   - [#2064](https://github.com/facebook/create-react-app/pull/2064) Removing a stylistic lint rule. ([@anilreddykatta](https://github.com/anilreddykatta))
   - [#1763](https://github.com/facebook/create-react-app/pull/1763) disable ignoring unused vars prefixed with \_. ([@doshisid](https://github.com/doshisid))
   - [#1989](https://github.com/facebook/create-react-app/pull/1989) Relax label rules (Closes [#1835](https://github.com/facebook/create-react-app/issues/1835)). ([@anilreddykatta](https://github.com/anilreddykatta))
   - [#1773](https://github.com/facebook/create-react-app/pull/1773) Remove 'guard-for-in' lint rule. ([@spicyj](https://github.com/spicyj))
-- `eslint-config-react-app`, `react-scripts`
+- `eslint-config-react-app`, `npack-scripts`
   - [#2130](https://github.com/facebook/create-react-app/pull/2130) Blacklist confusing global variables. ([@doshisid](https://github.com/doshisid))
   - [#1542](https://github.com/facebook/create-react-app/pull/1542) Bump jsx-a11y version. ([@bondz](https://github.com/bondz))
   - [#1705](https://github.com/facebook/create-react-app/pull/1705) Add support for `ignoreRestSiblings` in `no-unused-vars`. ([@chrisdrackett](https://github.com/chrisdrackett))
@@ -1726,14 +1726,14 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
   - [#2120](https://github.com/facebook/create-react-app/pull/2120) Omit ESLint warnings when there are ESLint errors. ([@gaearon](https://github.com/gaearon))
   - [#2113](https://github.com/facebook/create-react-app/pull/2113) Prettify errors and warnings for webpack 2. ([@gaearon](https://github.com/gaearon))
   - [#1842](https://github.com/facebook/create-react-app/pull/1842) Modularize and extract crash overlay to iframe. ([@Timer](https://github.com/Timer))
-- `create-react-app`
+- `create-npack-app`
   - [#1811](https://github.com/facebook/create-react-app/pull/1811) Allow creation of apps in empty Mercurial repos. ([@GreenGremlin](https://github.com/GreenGremlin))
 - Other
   - [#1402](https://github.com/facebook/create-react-app/pull/1402) Create empty package.json in e2e test (#1401). ([@matoilic](https://github.com/matoilic))
 
 #### :memo: Documentation
 
-- `react-scripts`
+- `npack-scripts`
   - [#2193](https://github.com/facebook/create-react-app/pull/2193) Fix webpack config typo. ([@Justkant](https://github.com/Justkant))
   - [#2137](https://github.com/facebook/create-react-app/pull/2137) Remove live-editing since isn't accurate. ([@cesarvarela](https://github.com/cesarvarela))
   - [#2114](https://github.com/facebook/create-react-app/pull/2114) Update Sass README. ([@kellyrmilligan](https://github.com/kellyrmilligan))
@@ -1764,22 +1764,22 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
 
 #### :house: Internal
 
-- `react-scripts`
+- `npack-scripts`
   - [#2213](https://github.com/facebook/create-react-app/pull/2213) Use some ES6 syntax. ([@shashkovdanil](https://github.com/shashkovdanil))
   - [#1913](https://github.com/facebook/create-react-app/pull/1913) Add linked modules test. ([@Timer](https://github.com/Timer))
-  - [#1736](https://github.com/facebook/create-react-app/pull/1736) Fix eject for linked react-scripts. ([@tuchk4](https://github.com/tuchk4))
+  - [#1736](https://github.com/facebook/create-react-app/pull/1736) Fix eject for linked npack-scripts. ([@tuchk4](https://github.com/tuchk4))
   - [#1741](https://github.com/facebook/create-react-app/pull/1741) Fix internal linting setup. ([@gaearon](https://github.com/gaearon))
   - [#1730](https://github.com/facebook/create-react-app/pull/1730) Fix Node 4 e2e tests. ([@Timer](https://github.com/Timer))
   - [#1715](https://github.com/facebook/create-react-app/pull/1715) Remove unused `url` import in webpack config. ([@pd4d10](https://github.com/pd4d10))
   - [#1700](https://github.com/facebook/create-react-app/pull/1700) Update extract-text-webpack-plugin to stable. ([@SimenB](https://github.com/SimenB))
-- `react-dev-utils`, `react-scripts`
-  - [#2209](https://github.com/facebook/create-react-app/pull/2209) Move more logic from react-scripts to react-dev-utils. ([@gaearon](https://github.com/gaearon))
+- `react-dev-utils`, `npack-scripts`
+  - [#2209](https://github.com/facebook/create-react-app/pull/2209) Move more logic from npack-scripts to react-dev-utils. ([@gaearon](https://github.com/gaearon))
   - [#2138](https://github.com/facebook/create-react-app/pull/2138) Add custom eslint formatter. ([@doshisid](https://github.com/doshisid))
-- `babel-preset-react-app`, `react-scripts`
-  - [#2175](https://github.com/facebook/create-react-app/pull/2175) Resolve regenerator runtime relative to react-scripts. ([@gaearon](https://github.com/gaearon))
+- `babel-preset-react-app`, `npack-scripts`
+  - [#2175](https://github.com/facebook/create-react-app/pull/2175) Resolve regenerator runtime relative to npack-scripts. ([@gaearon](https://github.com/gaearon))
   - [#1894](https://github.com/facebook/create-react-app/pull/1894) Re-disable babel modules transform. ([@Timer](https://github.com/Timer))
   - [#1742](https://github.com/facebook/create-react-app/pull/1742) Switch to preset-env. ([@Timer](https://github.com/Timer))
-- `create-react-app`, `react-dev-utils`, `react-scripts`
+- `create-npack-app`, `react-dev-utils`, `npack-scripts`
   - [#1897](https://github.com/facebook/create-react-app/pull/1897) Bump minimal Node version to 6. ([@ianschmitz](https://github.com/ianschmitz))
 - Other
   - [#1868](https://github.com/facebook/create-react-app/pull/1868) Fix AppVeyor CI. ([@darrenscerri](https://github.com/darrenscerri))
@@ -1789,11 +1789,11 @@ Please [file an issue](https://github.com/facebook/create-react-app/issues/new) 
   - [#1707](https://github.com/facebook/create-react-app/pull/1707) Add double quotes to escape spaces in paths in e2e. ([@viankakrisna](https://github.com/viankakrisna))
   - [#1688](https://github.com/facebook/create-react-app/pull/1688) Pin and upgrade lerna version. ([@viankakrisna](https://github.com/viankakrisna))
   - [#1648](https://github.com/facebook/create-react-app/pull/1648) Add `appveyor.yml`. ([@Timer](https://github.com/Timer))
-- `babel-preset-react-app`, `create-react-app`, `eslint-config-react-app`, `react-dev-utils`, `react-scripts`
+- `babel-preset-react-app`, `create-npack-app`, `eslint-config-react-app`, `react-dev-utils`, `npack-scripts`
   - [#1738](https://github.com/facebook/create-react-app/pull/1738) Update to modern code style (ES6). ([@tuchk4](https://github.com/tuchk4))
 - `eslint-config-react-app`
   - [#1740](https://github.com/facebook/create-react-app/pull/1740) Relax ESLint config peerDependency. ([@gaearon](https://github.com/gaearon))
-- `eslint-config-react-app`, `react-dev-utils`, `react-scripts`
+- `eslint-config-react-app`, `react-dev-utils`, `npack-scripts`
   - [#1729](https://github.com/facebook/create-react-app/pull/1729) Lint internal scripts with eslint:recommended. ([@gaearon](https://github.com/gaearon))
 - `react-dev-utils`
   - [#1724](https://github.com/facebook/create-react-app/pull/1724) Don't use ES6 in a file that should run on Node 4. ([@gaearon](https://github.com/gaearon))

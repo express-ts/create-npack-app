@@ -65,12 +65,12 @@ labels: 'issue: bug report, needs triage'
   There are a few common documented problems, such as watcher not detecting changes, or build failing.
   They are described in the Troubleshooting section of the User Guide:
 
-  https://facebook.github.io/create-react-app/docs/troubleshooting
+  https://facebook.github.io/create-npack-app/docs/troubleshooting
 
   Please scan these few sections for common problems.
   Additionally, you can search the User Guide itself for something you're having issues with:
 
-  https://facebook.github.io/create-react-app/
+  https://facebook.github.io/create-npack-app/
 
   If you didn't find the solution, please share which words you searched for.
   This helps us improve documentation for future readers who might encounter the same problem.
@@ -84,10 +84,10 @@ labels: 'issue: bug report, needs triage'
   To help identify if a problem is specific to a platform, browser, or module version, information about your environment is required.
   This enables the maintainers quickly reproduce the issue and give feedback.
 
-  Run the following command in your React app's folder in terminal.
+  Run the following command in your @express app's folder in terminal.
   Note: The result is copied to your clipboard directly.
 
-  `npx create-react-app --info`
+  `npx create-npack-app --info`
 
   Paste the output of the command in the section below.
 -->
@@ -103,9 +103,7 @@ labels: 'issue: bug report, needs triage'
 
 (Write your steps here:)
 
-1.
-2.
-3.
+1. 2. 3.
 
 ### Expected behavior
 

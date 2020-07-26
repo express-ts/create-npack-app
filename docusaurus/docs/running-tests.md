@@ -3,17 +3,17 @@ id: running-tests
 title: Running Tests
 ---
 
-> Note: this feature is available with `react-scripts@0.3.0` and higher.
+> Note: this feature is available with `npack-scripts@0.3.0` and higher.
 
-> [Read the migration guide to learn how to enable it in older projects!](https://github.com/facebook/create-react-app/blob/master/CHANGELOG-0.x.md#migrating-from-023-to-030)
+> [Read the migration guide to learn how to enable it in older projects!](https://github.com/express-ts/create-npack-app/blob/master/CHANGELOG-0.x.md#migrating-from-023-to-030)
 
-Create React App uses [Jest](https://jestjs.io/) as its test runner. To prepare for this integration, we did a [major revamp](https://jestjs.io/blog/2016/09/01/jest-15.html) of Jest so if you heard bad things about it years ago, give it another try.
+Create Npack App uses [Jest](https://jestjs.io/) as its test runner. To prepare for this integration, we did a [major revamp](https://jestjs.io/blog/2016/09/01/jest-15.html) of Jest so if you heard bad things about it years ago, give it another try.
 
 Jest is a Node-based runner. This means that the tests always run in a Node environment and not in a real browser. This lets us enable fast iteration speed and prevent flakiness.
 
 While Jest provides browser globals such as `window` thanks to [jsdom](https://github.com/tmpvar/jsdom), they are only approximations of the real browser behavior. Jest is intended to be used for unit tests of your logic and your components rather than the DOM quirks.
 
-We recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App.
+We recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create Npack App.
 
 ## Filename Conventions
 
@@ -139,7 +139,7 @@ and then use them in your tests like you normally do.
 
 ## Initializing Test Environment
 
-> Note: this feature is available with `react-scripts@0.4.0` and higher.
+> Note: this feature is available with `npack-scripts@0.4.0` and higher.
 
 If your app uses a browser API that you need to mock in your tests or if you need a global setup before running your tests, add a `src/setupTests.js` to your project. It will be automatically executed before running your tests.
 
@@ -261,7 +261,7 @@ script:
 
 ### CircleCI
 
-Follow [this article](https://medium.com/@knowbody/circleci-and-zeits-now-sh-c9b7eebcd3c1) to set up CircleCI with a Create React App project.
+Follow [this article](https://medium.com/@knowbody/circleci-and-zeits-now-sh-c9b7eebcd3c1) to set up CircleCI with a Create Npack App project.
 
 ## On your own environment
 
@@ -309,10 +309,10 @@ If you know that none of your tests depend on [jsdom](https://github.com/tmpvar/
 
 ```diff
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
--   "test": "react-scripts test"
-+   "test": "react-scripts test --env=node"
+    "start": "npack-scripts start",
+    "build": "npack-scripts build",
+-   "test": "npack-scripts test"
++   "test": "npack-scripts test --env=node"
 ```
 
 To help you make up your mind, here is a list of APIs that **need jsdom**:
@@ -336,6 +336,6 @@ Snapshot testing is a feature of Jest that automatically generates text snapshot
 
 ## Editor Integration
 
-If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates.
+If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create Npack App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates.
 
 ![VS Code Jest Preview](https://cloud.githubusercontent.com/assets/49038/20795349/a032308a-b7c8-11e6-9b34-7eeac781003f.png)

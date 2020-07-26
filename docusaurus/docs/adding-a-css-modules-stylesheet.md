@@ -4,7 +4,7 @@ title: Adding a CSS Modules Stylesheet
 sidebar_label: Adding CSS Modules
 ---
 
-> Note: this feature is available with `react-scripts@2.0.0` and higher.
+> Note: this feature is available with `npack-scripts@2.0.0` and higher.
 
 This project supports [CSS Modules](https://github.com/css-modules/css-modules) alongside regular stylesheets using the `[name].module.css` file naming convention. CSS Modules allows the scoping of CSS by automatically creating a unique classname of the format `[filename]\_[classname]\_\_[hash]`.
 

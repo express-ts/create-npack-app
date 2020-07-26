@@ -29,7 +29,7 @@ serve -h
 
 ## Other Solutions
 
-You don’t necessarily need a static server in order to run a Create React App project in production. It also works well when integrated into an existing server side app.
+You don’t necessarily need a static server in order to run a Create Npack App project in production. It also works well when integrated into an existing server side app.
 
 Here’s a programmatic example using [Node](https://nodejs.org/) and [Express](https://expressjs.com/):
 
@@ -47,9 +47,9 @@ app.get('/', function (req, res) {
 app.listen(9000);
 ```
 
-The choice of your server software isn’t important either. Since Create React App is completely platform-agnostic, there’s no need to explicitly use Node.
+The choice of your server software isn’t important either. Since Create Npack App is completely platform-agnostic, there’s no need to explicitly use Node.
 
-The `build` folder with static assets is the only output produced by Create React App.
+The `build` folder with static assets is the only output produced by Create Npack App.
 
 However this is not quite enough if you use client-side routing. Read the next section if you want to support URLs like `/todos/42` in your single-page app.
 
@@ -90,9 +90,9 @@ service worker navigation routing can be configured or disabled by
 [`eject`ing](available-scripts.md#npm-run-eject) and then modifying the
 [`navigateFallback`](https://github.com/GoogleChrome/sw-precache#navigatefallback-string)
 and [`navigateFallbackWhitelist`](https://github.com/GoogleChrome/sw-precache#navigatefallbackwhitelist-arrayregexp)
-options of the `SWPrecachePlugin` configuration.
+options of the `SWPrecachePlugin` [configuration](../config/webpack.config.prod.js).
 
-When users install your app to the homescreen of their device the default configuration will make a shortcut to `/index.html`. This may not work for client-side routers which expect the app to be served from `/`. Edit the web app manifest at `public/manifest.json` and change `start_url` to match the required URL scheme, for example:
+When users install your app to the homescreen of their device the default configuration will make a shortcut to `/index.html`. This may not work for client-side routers which expect the app to be served from `/`. Edit the web app manifest at [`public/manifest.json`](public/manifest.json) and change `start_url` to match the required URL scheme, for example:
 
 ```js
   "start_url": ".",
@@ -100,7 +100,7 @@ When users install your app to the homescreen of their device the default config
 
 ## Building for Relative Paths
 
-By default, Create React App produces a build assuming your app is hosted at the server root.
+By default, Create Npack App produces a build assuming your app is hosted at the server root.
 
 To override this, specify the `homepage` in your `package.json`, for example:
 
@@ -108,7 +108,7 @@ To override this, specify the `homepage` in your `package.json`, for example:
   "homepage": "http://mywebsite.com/relativepath",
 ```
 
-This will let Create React App correctly infer the root path to use in the generated HTML file.
+This will let Create Npack App correctly infer the root path to use in the generated HTML file.
 
 **Note**: If you are using `react-router@^4`, you can root `<Link>`s using the `basename` prop on any `<Router>`.
 
@@ -123,7 +123,7 @@ For example:
 
 ### Serving the Same Build from Different Paths
 
-> Note: this feature is available with `react-scripts@0.9.0` and higher.
+> Note: this feature is available with `npack-scripts@0.9.0` and higher.
 
 If you are not using the HTML5 `pushState` history API or not using client-side routing at all, it is unnecessary to specify the URL from which your app will be served. Instead, you can put this in your `package.json`:
 
@@ -140,7 +140,7 @@ You can create an arbitrary build environment by creating a custom `.env` file a
 For example, to create a build environment for a staging environment:
 
 1. Create a file called `.env.staging`
-1. Set environment variables as you would any other `.env` file (e.g. `REACT_APP_API_URL=http://api-staging.example.com`)
+1. Set environment variables as you would any other `.env` file (e.g. `EXPRESS_APP_API_URL=http://api-staging.example.com`)
 1. Install [env-cmd](https://www.npmjs.com/package/env-cmd)
    ```sh
    $ npm install env-cmd --save
@@ -166,7 +166,7 @@ Variables in `.env.production` will be used as fallback because `NODE_ENV` will 
 The AWS Amplify Console provides continuous deployment and hosting for modern web apps (single page apps and static site generators) with serverless backends. The Amplify Console offers globally available CDNs, custom domain setup, feature branch deployments, and password protection.
 
 1. Login to the Amplify Console [here](https://console.aws.amazon.com/amplify/home).
-1. Connect your Create React App repo and pick a branch. If you're looking for a Create React App+Amplify starter, try the [create-react-app-auth-amplify starter](https://github.com/swaminator/create-react-app-auth-amplify) that demonstrates setting up auth in 10 minutes with Create React App.
+1. Connect your Create Npack App repo and pick a branch. If you're looking for a Create Npack App+Amplify starter, try the [create-npack-app-auth-amplify starter](https://github.com/swaminator/create-npack-app-auth-amplify) that demonstrates setting up auth in 10 minutes with Create Npack App.
 1. The Amplify Console automatically detects the build settings. Choose Next.
 1. Choose _Save and deploy_.
 
@@ -259,7 +259,7 @@ For more information see [Firebase Hosting](https://firebase.google.com/docs/hos
 
 ## [GitHub Pages](https://pages.github.com/)
 
-> Note: this feature is available with `react-scripts@0.2.0` and higher.
+> Note: this feature is available with `npack-scripts@0.2.0` and higher.
 
 ### Step 1: Add `homepage` to `package.json`
 
@@ -285,7 +285,7 @@ or for a custom domain page:
   "homepage": "https://mywebsite.com",
 ```
 
-Create React App uses the `homepage` field to determine the root URL in the built HTML file.
+Create Npack App uses the `homepage` field to determine the root URL in the built HTML file.
 
 ### Step 2: Install `gh-pages` and add `deploy` to `scripts` in `package.json`
 
@@ -309,8 +309,8 @@ Add the following scripts in your `package.json`:
   "scripts": {
 +   "predeploy": "npm run build",
 +   "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npack-scripts start",
+    "build": "npack-scripts build",
 ```
 
 The `predeploy` script will run automatically before `deploy` is run.
@@ -378,7 +378,7 @@ If, when deploying, you get `Cannot read property 'email' of null`, try the foll
 
 ## [Heroku](https://www.heroku.com/)
 
-Use the [Heroku Buildpack for Create React App](https://github.com/mars/create-react-app-buildpack).
+Use the [Heroku Buildpack for Create Npack App](https://github.com/mars/create-npack-app-buildpack).
 
 You can find instructions in [Deploying React with Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration).
 
@@ -442,54 +442,49 @@ To support `pushState`, make sure to create a `public/_redirects` file with the 
 /*  /index.html  200
 ```
 
-When you build the project, Create React App will place the `public` folder contents into the build output.
+When you build the project, Create Npack App will place the `public` folder contents into the build output.
 
-## [Vercel](https://vercel.com)
+## [ZEIT Now](https://zeit.co)
 
-[Vercel](https://vercel.com/home) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
+[ZEIT Now](https://zeit.co) is a cloud platform for websites and serverless APIs, that you can use to deploy your Create Npack App projects to your personal domain (or a free `.now.sh` suffixed URL).
 
-### Step 1: Deploying your React project to Vercel
+This guide will show you how to get started in a few quick steps:
 
-To deploy your React project with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+### Step 1: Installing Now CLI
 
-Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant [options](https://vercel.com/docs/build-step#build-&-development-settings) preconfigured for you with the ability to change as needed.
+To install their command-line interface with [npm](https://www.npmjs.com/package/now), run the following command:
 
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "master" or "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+```shell
+npm i -g now
+```
 
-Once deployed, you will get a URL to see your app live, such as the following: https://create-react-app-example.vercel.app/.
+### Step 2: Deploying
 
-### Step 2 (optional): Using a Custom Domain
+You can deploy your application by running the following command in the root of the project directory:
 
-If you want to use a Custom Domain with your Vercel deployment, you can **Add** or **Transfer in** your domain via your Vercel [account Domain settings.](https://vercel.com/dashboard/domains)
+```shell
+now
+```
 
-To add your domain to your project, navigate to your [Project](https://vercel.com/docs/platform/projects) from the Vercel Dashboard. Once you have selected your project, click on the "Settings" tab, then select the **Domains** menu item. From your projects **Domain** page, enter the domain you wish to add to your project.
+**Alternatively**, you can also use their integration for [GitHub](https://zeit.co/github) or [GitLab](https://zeit.co/gitlab).
 
-Once the domain as been added, you will be presented with different methods for configuring it.
+That’s all!
 
-### Deploying a fresh React project
+Your site will now deploy, and you will receive a link similar to the following: https://react.now-examples.now.sh
 
-You can deploy a fresh React project, with a Git repository set up for you, with the following Deploy Button:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fvercel%2Fvercel%2Ftree%2Fmaster%2Fexamples%2Fcreate-react-app)
-
-### Vercel References:
-
-- [Example Source](https://github.com/vercel/vercel/tree/master/examples/create-react-app)
-- [Official Vercel Guide](https://vercel.com/guides/deploying-react-with-vercel-cra)
-- [Vercel Deployment Docs](https://vercel.com/docs)
-- [Vercel Custom Domain Docs](https://vercel.com/docs/custom-domains)
+Out of the box, you are preconfigured for client-side routing compatibility and appropriate default caching headers. This behaviour can be overwritten [like this](https://zeit.co/docs/v2/advanced/routes/).
 
 ## [Render](https://render.com)
 
 Render offers free [static site](https://render.com/docs/static-sites) hosting with fully managed SSL, a global CDN and continuous auto deploys from GitHub.
 
-Deploy your app in only a few minutes by following the [Create React App deployment guide](https://render.com/docs/deploy-create-react-app).
+Deploy your app in only a few minutes by following the [Create Npack App deployment guide](https://render.com/docs/deploy-create-npack-app).
 
 Use invite code `cra` to sign up or use [this link](https://render.com/i/cra).
 
 ## [S3](https://aws.amazon.com/s3) and [CloudFront](https://aws.amazon.com/cloudfront/)
 
-See this [blog post](https://medium.com/@omgwtfmarc/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af) on how to deploy your React app to Amazon Web Services S3 and CloudFront. If you are looking to add a custom domain, HTTPS and continuous deployment see this [blog post](https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-including-https-a-custom-domain-a-cdn-and-58245251f081).
+See this [blog post](https://medium.com/@omgwtfmarc/deploying-create-npack-app-to-s3-or-cloudfront-48dae4ce0af) on how to deploy your @express app to Amazon Web Services S3 and CloudFront. If you are looking to add a custom domain, HTTPS and continuous deployment see this [blog post](https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-including-https-a-custom-domain-a-cdn-and-58245251f081).
 
 ## [Surge](https://surge.sh/)
 
@@ -505,4 +500,4 @@ Note that in order to support routers that use HTML5 `pushState` API, you may wa
 
 ## Publishing Components To npm
 
-Create React App doesn't provide any built-in functionality to publish a component to npm. If you're ready to extract a component from your project so other people can use it, we recommend moving it to a separate directory outside of your project and then using a tool like [nwb](https://github.com/insin/nwb#react-components-and-libraries) to prepare it for publishing.
+Create Npack App doesn't provide any built-in functionality to publish a component to npm. If you're ready to extract a component from your project so other people can use it, we recommend moving it to a separate directory outside of your project and then using a tool like [nwb](https://github.com/insin/nwb#react-components-and-libraries) to prepare it for publishing.

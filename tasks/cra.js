@@ -96,14 +96,14 @@ Object.keys(packagePathsByName).forEach(name => {
 console.log('Replaced all local dependencies for testing.');
 console.log('Do not edit any package.json while this task is running.');
 
-// Finally, pack react-scripts.
+// Finally, pack npack-scripts.
 // Don't redirect stdio as we want to capture the output that will be returned
 // from execSync(). In this case it will be the .tgz filename.
 const scriptsFileName = cp
-  .execSync(`npm pack`, { cwd: path.join(packagesDir, 'react-scripts') })
+  .execSync(`npm pack`, { cwd: path.join(packagesDir, 'npack-scripts') })
   .toString()
   .trim();
-const scriptsPath = path.join(packagesDir, 'react-scripts', scriptsFileName);
+const scriptsPath = path.join(packagesDir, 'npack-scripts', scriptsFileName);
 
 // Now that we have packed them, call the global CLI.
 cp.execSync('yarn cache clean');
@@ -111,7 +111,7 @@ cp.execSync('yarn cache clean');
 const args = process.argv.slice(2);
 
 // Now run the CRA command
-const craScriptPath = path.join(packagesDir, 'create-react-app', 'index.js');
+const craScriptPath = path.join(packagesDir, 'create-npack-app', 'index.js');
 cp.execSync(
   `node ${craScriptPath} ${args.join(' ')} --scripts-version="${scriptsPath}"`,
   {

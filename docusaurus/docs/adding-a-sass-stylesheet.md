@@ -4,7 +4,7 @@ title: Adding a Sass Stylesheet
 sidebar_label: Adding Sass Stylesheets
 ---
 
-> Note: this feature is available with `react-scripts@2.0.0` and higher.
+> Note: this feature is available with `npack-scripts@2.0.0` and higher.
 
 Generally, we recommend that you don’t reuse the same CSS classes across different components. For example, instead of using a `.Button` CSS class in `<AcceptButton>` and `<RejectButton>` components, we recommend creating a `<Button>` component with its own `.Button` styles, that both `<AcceptButton>` and `<RejectButton>` can render (but [not inherit](https://facebook.github.io/react/docs/composition-vs-inheritance.html)).
 
@@ -34,9 +34,10 @@ This will allow you to do imports like
 
 `node-sass` also supports the `SASS_PATH` variable.
 
-To use imports relative to a path you specify, and from `node_modules` without adding the `~` prefix, you can add a [`.env` file](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/adding-custom-environment-variables.md#adding-development-environment-variables-in-env) at the project root with the variable `SASS_PATH=node_modules:src`. To specify more directories you can add them to `SASS_PATH` separated by a `:` like `path1:path2:path3`.
+To use imports relative to a path you specify, and from `node_modules` without adding the `~` prefix, you can add a [`.env` file](https://github.com/express-ts/create-npack-app/blob/master/docusaurus/docs/adding-custom-environment-variables.md#adding-development-environment-variables-in-env) at the project root with the variable `SASS_PATH=node_modules:src`. To specify more directories you can add them to `SASS_PATH` separated by a `:` like `path1:path2:path3`.
 
 If you set `SASS_PATH=node_modules:src`, this will allow you to do imports like
+
 ```scss
 @import 'styles/colors'; // assuming a styles directory under src/, where _colors.scss partial file exists.
 @import 'nprogress/nprogress'; // importing a css file from the nprogress node module

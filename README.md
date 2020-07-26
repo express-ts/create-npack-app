@@ -1,25 +1,23 @@
-# Create React App [![Build Status](https://dev.azure.com/facebook/create-react-app/_apis/build/status/facebook.create-react-app?branchName=master)](https://dev.azure.com/facebook/create-react-app/_build/latest?definitionId=1&branchName=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/facebook/create-react-app/blob/master/CONTRIBUTING.md)
+# Create Node.js App [![Build Status](https://dev.azure.com/express-ts/create-npack-app/_apis/build/status/facebook.create-npack-app?branchName=master)](https://dev.azure.com/express-ts/create-npack-app/_build/latest?definitionId=1&branchName=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/express-ts/create-npack-app/blob/master/CONTRIBUTING.md)
 
-<img alt="Logo" align="right" src="https://create-react-app.dev/img/logo.svg" width="20%" />
-
-Create React apps with no build configuration.
+Create Server-side apps with no build configuration.
 
 - [Creating an App](#creating-an-app) – How to create a new app.
-- [User Guide](https://facebook.github.io/create-react-app/) – How to develop apps bootstrapped with Create React App.
+- [User Guide](https://facebook.github.io/create-npack-app/) – How to develop apps bootstrapped with Create Npack App.
 
-Create React App works on macOS, Windows, and Linux.<br>
+Create Npack App works on macOS, Windows, and Linux.<br>
 If something doesn’t work, please [file an issue](https://github.com/facebook/create-react-app/issues/new).<br>
-If you have questions or need help, please ask in [GitHub Discussions](https://github.com/facebook/create-react-app/discussions).
+If you have questions or need help, please ask in [GitHub Discussions](https://github.com/facebook/create-npack-app/discussions).
 
 ## Quick Overview
 
 ```sh
-npx create-react-app my-app
+npx create-npack-app my-app
 cd my-app
 npm start
 ```
 
-If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` or `yarn global remove create-react-app` to ensure that npx always uses the latest version.
+If you've previously installed `create-npack-app` globally via `npm install -g create-npack-app`, we recommend you uninstall the package using `npm uninstall -g create-npack-app` or `yarn global remove create-react-app` to ensure that npx always uses the latest version.
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
 
@@ -27,7 +25,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with `npm run build`.
 
 <p align='center'>
-<img src='https://cdn.jsdelivr.net/gh/facebook/create-react-app@27b42ac7efa018f2541153ab30d63180f5fa39e0/screencast.svg' width='600' alt='npm start'>
+<img src='https://cdn.jsdelivr.net/gh/express-ts/create-npack-app@27b42ac7efa018f2541153ab30d63180f5fa39e0/screencast.svg' width='600' alt='npm start'>
 </p>
 
 ### Get Started Immediately
@@ -46,7 +44,7 @@ To create a new app, you may choose one of the following methods:
 ### npx
 
 ```sh
-npx create-react-app my-app
+npx create-npack-app my-app
 ```
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is a package runner tool that comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
@@ -109,7 +107,7 @@ The page will automatically reload if you make changes to the code.<br>
 You will see the build errors and lint warnings in the console.
 
 <p align='center'>
-<img src='https://cdn.jsdelivr.net/gh/marionebl/create-react-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
+<img src='https://cdn.jsdelivr.net/gh/marionebl/create-npack-app@9f6282671c54f0874afd37a72f6689727b562498/screencast-error.svg' width='600' alt='Build errors'>
 </p>
 
 ### `npm test` or `yarn test`
@@ -117,24 +115,22 @@ You will see the build errors and lint warnings in the console.
 Runs the test watcher in an interactive mode.<br>
 By default, runs tests related to files changed since the last commit.
 
-[Read more about testing.](https://facebook.github.io/create-react-app/docs/running-tests)
+[Read more about testing.](https://facebook.github.io/create-npack-app/docs/running-tests)
 
 ### `npm run build` or `yarn build`
 
 Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
+It correctly bundles Express in production mode and optimizes the build for the best performance.
 
 Your app is ready to be deployed.
 
 ## User Guide
 
-You can find detailed instructions on using Create React App and many tips in [its documentation](https://facebook.github.io/create-react-app/).
+You can find detailed instructions on using Create Npack App and many tips in [its documentation](https://facebook.github.io/create-npack-app/).
 
 ## How to Update to New Versions?
 
-Please refer to the [User Guide](https://facebook.github.io/create-react-app/docs/updating-to-new-releases) for this and other information.
+Please refer to the [User Guide](https://facebook.github.io/create-npack-app/docs/updating-to-new-releases) for this and other information.
 
 ## Philosophy
 
@@ -146,24 +142,22 @@ Please refer to the [User Guide](https://facebook.github.io/create-react-app/doc
 
 ## What’s Included?
 
-Your environment will have everything you need to build a modern single-page React app:
+Your environment will have everything you need to build a modern single-page @express app:
 
-- React, JSX, ES6, TypeScript and Flow syntax support.
+- Node.js, Express, ES6, TypeScript and Flow syntax support.
 - Language extras beyond ES6 like the object spread operator.
-- Autoprefixed CSS, so you don’t need `-webkit-` or other prefixes.
 - A fast interactive unit test runner with built-in support for coverage reporting.
 - A live development server that warns about common mistakes.
-- A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `react-scripts@2.0.0` and higher_)
+- A build script to bundle TS, JS, and images for production, with hashes and sourcemaps.
 - Hassle-free updates for the above tools with a single dependency.
 
 Check out [this guide](https://github.com/nitishdayal/cra_closer_look) for an overview of how these tools fit together.
 
-The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
+The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-npack-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
 
 ## Popular Alternatives
 
-Create React App is a great fit for:
+Create Npack App is a great fit for:
 
 - **Learning React** in a comfortable and feature-rich development environment.
 - **Starting new single-page React applications.**
@@ -177,9 +171,9 @@ Here are a few common cases where you might want to try something else:
 
 - If you need to **publish a React component**, [nwb](https://github.com/insin/nwb) can [also do this](https://github.com/insin/nwb#react-components-and-libraries), as well as [Neutrino's react-components preset](https://neutrino.js.org/packages/react-components/).
 
-- If you want to do **server rendering** with React and Node.js, check out [Next.js](https://nextjs.org/) or [Razzle](https://github.com/jaredpalmer/razzle). Create React App is agnostic of the backend, and only produces static HTML/JS/CSS bundles.
+- If you want to do **server rendering** with React and Node.js, check out [Next.js](https://github.com/zeit/next.js/) or [Razzle](https://github.com/jaredpalmer/razzle). Create Npack App is agnostic of the backend, and only produces static HTML/JS/CSS bundles.
 
-- If your website is **mostly static** (for example, a portfolio or a blog), consider using [Gatsby](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/). Unlike Create React App, Gatsby pre-renders the website into HTML at build time. Next.js supports both server rendering and pre-rendering.
+- If your website is **mostly static** (for example, a portfolio or a blog), consider using [Gatsby](https://www.gatsbyjs.org/) instead. Unlike Create Npack App, it pre-renders the website into HTML at the build time.
 
 - Finally, if you need **more customization**, check out [Neutrino](https://neutrino.js.org/) and its [React preset](https://neutrino.js.org/packages/react/).
 
@@ -194,16 +188,12 @@ Check out [Expo CLI](https://github.com/expo/expo-cli).
 
 ## Contributing
 
-We'd love to have your helping hand on `create-react-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
-
-## Supporting Create React App
-
-Create React App is a community maintained project and all contributors are volunteers. If you'd like to support the future development of Create React App then please consider donating to our [Open Collective](https://opencollective.com/create-react-app).
+We'd love to have your helping hand on `create-npack-app`! See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on what we're looking for and how to get started.
 
 ## Credits
 
 This project exists thanks to all the people who [contribute](CONTRIBUTING.md).<br>
-<a href="https://github.com/facebook/create-react-app/graphs/contributors"><img src="https://opencollective.com/create-react-app/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/express-ts/create-npack-app/graphs/contributors"><img src="https://opencollective.com/create-npack-app/contributors.svg?width=890&button=false" /></a>
 
 Thanks to [Netlify](https://www.netlify.com/) for hosting our documentation.
 
@@ -217,4 +207,4 @@ We are grateful to the authors of existing related projects for their ideas and 
 
 ## License
 
-Create React App is open source software [licensed as MIT](https://github.com/facebook/create-react-app/blob/master/LICENSE). The Create React App logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+Create Npack App is open source software [licensed as MIT](https://github.com/express-ts/create-npack-app/blob/master/LICENSE).
