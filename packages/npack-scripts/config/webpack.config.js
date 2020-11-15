@@ -6,7 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 // @remove-on-eject-end
-'use strict';
 
 const fs = require('fs');
 const path = require('path');
@@ -17,16 +16,16 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const paths = require('./paths');
-const modules = require('./modules');
-const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-const RunNodeWebpackPlugin = require('run-node-webpack-plugin');
+const PrettierPlugin = require('prettier-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 // @remove-on-eject-begin
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
+const getClientEnvironment = require('./env');
+const modules = require('./modules');
+const paths = require('./paths');
 // @remove-on-eject-end
 
 const appPackageJson = require(paths.appPackageJson);
@@ -42,6 +41,9 @@ const shouldUseNodeExternals =
   process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
 const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 const shouldAddCLIBanner = process.env.CLI_BANNER === 'true';
+const shouldRunScript = process.env.RUN_SCRIPT && process.env.RUN_SCRIPT !== 'false';
+
+const NodemonPlugin = shouldRunScript && require('nodemon-webpack-plugin');
 
 const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
@@ -59,7 +61,7 @@ module.exports = function (webpackEnv) {
   // Variable used for enabling profiling in Production
   // passed into alias object. Uses a flag if passed into the build command
   const isEnvProductionProfile = isEnvProduction;
-  /*&& process.argv.includes('--profile')*/
+  /* && process.argv.includes('--profile') */
 
   // We will provide `paths.publicUrlOrPath` to our app
   // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
@@ -385,7 +387,14 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
-      isEnvDevelopment && new RunNodeWebpackPlugin(),
+      isEnvDevelopment && new PrettierPlugin(),
+      isEnvDevelopment &&
+        shouldRunScript &&
+        new NodemonPlugin({
+          script: `build/${process.env.RUN_SCRIPT === 'true' ? 'index.js' : process.env.RUN_SCRIPT}`,
+          watch: paths.appBuild,
+          nodeArgs: ['--inspect'],
+        }),
       shouldAddCLIBanner &&
         new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true }),
       // This gives some necessary context to module not found errors, such as

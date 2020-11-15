@@ -1,6 +1,6 @@
 {
   "package": {
-    "dependencies": {
+    "devDependencies": {
       "supertest": "^4.0.2"
     }
   }
