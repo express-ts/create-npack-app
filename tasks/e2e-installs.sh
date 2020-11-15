@@ -51,7 +51,7 @@ function exists {
 # Check for accidental dependencies in package.json
 function checkDependencies {
   if ! awk '/"dependencies": {/{y=1;next}/},/{y=0; next}y' package.json | \
-  grep -v -q -E '^\s*"(@testing-library\/.+)|web-vitals|(react(-dom|-scripts)?)"'; then
+  grep -v -q -E '^\s*"(@testing-library\/.+)|express|(react(-dom|-scripts)?)"'; then
    echo "Dependencies are correct"
   else
    echo "There are extraneous dependencies in package.json"
