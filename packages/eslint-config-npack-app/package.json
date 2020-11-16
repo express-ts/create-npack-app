@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-npack-app",
-  "version": "5.2.3-alpha.2",
+  "version": "5.2.3",
   "description": "ESLint configuration used by Create Npack App",
   "repository": {
     "type": "git",
