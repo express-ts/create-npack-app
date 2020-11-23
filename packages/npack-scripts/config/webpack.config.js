@@ -36,11 +36,11 @@ const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // todo remove INLINE_RUNTIME_CHUNK option from docs
 // const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 
-const shouldUseNodeExternals =
-  process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
+const hasMultiEntries = appPackageJson.entries;
 const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 const shouldAddCLIBanner = process.env.CLI_BANNER === 'true';
 const shouldRunScript = process.env.RUN_SCRIPT && process.env.RUN_SCRIPT !== 'false';
+const shouldUseNodeExternals = process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
 
 const NodemonPlugin = shouldRunScript && require('nodemon-webpack-plugin');
 
@@ -50,6 +50,33 @@ const imageInlineSizeLimit = parseInt(
 
 // Check if TypeScript is setup
 const useTypeScript = fs.existsSync(paths.appTsConfig);
+
+function createWebpackEntries(webpackConfig, requireWebpackHotDevClient) {
+  return Object.entries(webpackConfig.entries).reduce(
+    (entries, [entryChunkName, entryChunkPath]) => ({
+      ...entries,
+      [entryChunkName]: [
+        // Include an alternative client for WebpackDevServer. A client's job is to
+        // connect to WebpackDevServer by a socket and get notified about changes.
+        // When you save a file, the client will either apply hot updates (in case
+        // of CSS changes), or refresh the page (in case of JS changes). When you
+        // make a syntax error, this client will display a syntax error overlay.
+        // Note: instead of the default WebpackDevServer client, we use a custom one
+        // to bring better experience for Create React App users. You can replace
+        // the line below with these two lines if you prefer the stock client:
+        // require.resolve('webpack-dev-server/client') + '?/',
+        // require.resolve('webpack/hot/dev-server'),
+        ...requireWebpackHotDevClient,
+        // Finally, this is your app's code:
+        entryChunkPath,
+        // We include the app code last so that if there is a runtime error during
+        // initialization, it doesn't blow up the WebpackDevServer client, and
+        // changing JS code would still trigger a refresh.
+      ],
+    }),
+    {}
+  );
+}
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -68,6 +95,17 @@ module.exports = function (webpackEnv) {
   // Get environment variables to inject into our app.
   const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
+  // generate entries
+  const entries = createWebpackEntries(
+    hasMultiEntries
+      ? appPackageJson
+      : { entries: { index: paths.appIndexJs } },
+    [
+      // todo: related to source-map
+      // isEnvDevelopment && webpackDevClientEntry,
+    ].filter(Boolean)
+  );
+
   return {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
@@ -81,7 +119,7 @@ module.exports = function (webpackEnv) {
     target: 'node',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
-    entry: { index: paths.appIndexJs },
+    entry: entries,
     output: {
       // The build folder.
       path: paths.appBuild,
