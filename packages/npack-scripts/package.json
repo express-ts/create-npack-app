@@ -1,6 +1,6 @@
 {
   "name": "npack-scripts",
-  "version": "3.4.3",
+  "version": "3.4.4",
   "description": "Configuration and scripts for Any Node (server,cli) App.",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.5.0",
-    "eslint-config-npack-app": "^5.2.3",
+    "eslint-config-npack-app": "^5.2.4",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.0",
