@@ -20,7 +20,6 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-const PrettierPlugin = require('prettier-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 // @remove-on-eject-begin
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
@@ -402,7 +401,6 @@ module.exports = function (webpackEnv) {
       ],
     },
     plugins: [
-      isEnvDevelopment && new PrettierPlugin(),
       isEnvDevelopment &&
         shouldRunScript &&
         new NodemonPlugin({
