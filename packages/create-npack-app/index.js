@@ -50,6 +50,4 @@ if (major < 10) {
   process.exit(1);
 }
 
-const { init } = require('./createNpackApp');
-
-init();
+require('./createReactApp');
