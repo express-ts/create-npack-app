@@ -38,7 +38,7 @@ const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
 
 const hasMultiEntries = appPackageJson.entries;
-const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
+// const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 const shouldAddCLIBanner = process.env.CLI_BANNER === 'true';
 const shouldRunScript = process.env.RUN_SCRIPT && process.env.RUN_SCRIPT !== 'false';
 const shouldUseNodeExternals = process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
@@ -491,11 +491,6 @@ module.exports = function (webpackEnv) {
         resolvePluginsRelativeTo: __dirname,
         baseConfig: {
           extends: [require.resolve('eslint-config-npack-app')],
-          rules: {
-            ...(!hasJsxRuntime && {
-              'react/react-in-jsx-scope': 'error',
-            }),
-          },
         },
       }),
     ].filter(Boolean),
