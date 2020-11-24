@@ -40,8 +40,10 @@ const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 const hasMultiEntries = appPackageJson.entries;
 // const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 const shouldAddCLIBanner = process.env.CLI_BANNER === 'true';
-const shouldRunScript = process.env.RUN_SCRIPT && process.env.RUN_SCRIPT !== 'false';
-const shouldUseNodeExternals = process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
+const shouldRunScript =
+  process.env.RUN_SCRIPT && process.env.RUN_SCRIPT !== 'false';
+const shouldUseNodeExternals =
+  process.env.NODE_EXTERNALS === 'true' || appPackageJson.nodeExternals;
 
 const NodemonPlugin = shouldRunScript && require('nodemon-webpack-plugin');
 
@@ -98,9 +100,7 @@ module.exports = function (webpackEnv) {
 
   // generate entries
   const entries = createWebpackEntries(
-    hasMultiEntries
-      ? appPackageJson
-      : { entries: { index: paths.appIndexJs } },
+    hasMultiEntries ? appPackageJson : { entries: { index: paths.appIndexJs } },
     [
       // todo: related to source-map
       // isEnvDevelopment && webpackDevClientEntry,
@@ -126,7 +126,7 @@ module.exports = function (webpackEnv) {
       path: paths.appBuild,
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
-      filename: 'index.js',
+      filename: '[name].[contenthash:8].js',
       // There are also additional JS chunk files if you use code splitting.
       chunkFilename: isEnvProduction
         ? '[name].[contenthash:8].chunk.js'
@@ -417,7 +417,11 @@ module.exports = function (webpackEnv) {
       isEnvDevelopment &&
         shouldRunScript &&
         new NodemonPlugin({
-          script: `build/${process.env.RUN_SCRIPT === 'true' ? 'index.js' : process.env.RUN_SCRIPT}`,
+          script: `build/${
+            process.env.RUN_SCRIPT === 'true'
+              ? 'index.js'
+              : process.env.RUN_SCRIPT
+          }`,
           watch: paths.appBuild,
           nodeArgs: ['--inspect'],
         }),

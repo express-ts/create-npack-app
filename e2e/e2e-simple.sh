@@ -118,54 +118,6 @@ npx create-npack-app test-app
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
-function verify_env_url {
-  # Backup package.json because we're going to make it dirty
-  cp package.json package.json.orig
-
-  # Test default behavior
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 0 || exit 1
-
-  # Test relative path build
-  awk -v n=2 -v s="  \"homepage\": \".\"," 'NR == n {print s} {print}' package.json > tmp && mv tmp package.json
-
-  yarn build
-  # Disabled until this can be tested
-  # grep -F -R --exclude=*.map "../../static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"./static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-
-  PUBLIC_URL="/anabsolute" yarn build
-  grep -F -R --exclude=*.map "/anabsolute/static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-
-  # Test absolute path build
-  sed "2s/.*/  \"homepage\": \"\/testingpath\",/" package.json > tmp && mv tmp package.json
-
-  yarn build
-  grep -F -R --exclude=*.map "/testingpath/static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-
-  PUBLIC_URL="https://www.example.net/overridetest" yarn build
-  grep -F -R --exclude=*.map "https://www.example.net/overridetest/static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-  grep -F -R --exclude=*.map "testingpath/static" build/ -q; test $? -eq 1 || exit 1
-
-  # Test absolute url build
-  sed "2s/.*/  \"homepage\": \"https:\/\/www.example.net\/testingpath\",/" package.json > tmp && mv tmp package.json
-
-  yarn build
-  grep -F -R --exclude=*.map "/testingpath/static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-
-  PUBLIC_URL="https://www.example.net/overridetest" yarn build
-  grep -F -R --exclude=*.map "https://www.example.net/overridetest/static/" build/ -q; test $? -eq 0 || exit 1
-  grep -F -R --exclude=*.map "\"/static/" build/ -q; test $? -eq 1 || exit 1
-  grep -F -R --exclude=*.map "testingpath/static" build/ -q; test $? -eq 1 || exit 1
-
-  # Restore package.json
-  rm package.json
-  mv package.json.orig package.json
-}
 
 function verify_module_scope {
   # Create stub json file
@@ -208,9 +160,6 @@ CI=true yarn test
 # Test the server
 yarn start --smoke-test
 
-# Test environment handling
-verify_env_url
-
 # Test reliance on webpack internals
 verify_module_scope
 
@@ -243,9 +192,6 @@ yarn test --watch=no
 
 # Test the server
 yarn start --smoke-test
-
-# Test environment handling
-verify_env_url
 
 # Test reliance on webpack internals
 verify_module_scope
