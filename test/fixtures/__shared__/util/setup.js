@@ -3,7 +3,6 @@ const fs = require('fs-extra');
 const path = require('path');
 const tempy = require('tempy');
 const ReactScripts = require('./scripts');
-const paths = require('./paths');
 
 module.exports = class TestSetup {
   constructor(fixtureName, templateDirectory, { pnp = true } = {}) {
@@ -47,7 +46,6 @@ module.exports = class TestSetup {
       test: 'npack-scripts test',
     });
     packageJson.license = packageJson.license || 'UNLICENSED';
-    packageJson.entries = { index: paths.appIndexJs, };
     await fs.writeJson(
       path.resolve(this.testDirectory, 'package.json'),
       packageJson

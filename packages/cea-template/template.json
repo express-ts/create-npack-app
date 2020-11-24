@@ -1,5 +1,8 @@
 {
   "package": {
+    "entries": {
+      "index": './src/index'
+    },
     "devDependencies": {
       "supertest": "^4.0.2"
     }
