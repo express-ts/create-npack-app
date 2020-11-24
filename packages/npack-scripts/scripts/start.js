@@ -38,7 +38,7 @@ const {
   choosePort,
   createCompiler,
   prepareUrls,
-} = require('react-dev-utils/WebpackDevServerUtils');
+} = require('../config/WebpackDevServerUtils');
 const { handler } = require('./utils/buildHandler');
 const paths = require('../config/paths');
 const configFactory = require('../config/webpack.config');

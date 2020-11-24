@@ -104,10 +104,10 @@ module.exports = function (
     );
     console.error(
       `You can fix this by running ${chalk.cyan(
-        'npm uninstall -g create-react-app'
+        'npm uninstall -g create-npack-app'
       )} or ${chalk.cyan(
-        'yarn global remove create-react-app'
-      )} before using ${chalk.cyan('create-react-app')} again.`
+        'yarn global remove create-npack-app'
+      )} before using ${chalk.cyan('create-npack-app')} again.`
     );
     return;
   }
@@ -211,7 +211,7 @@ module.exports = function (
 
   // Setup the eslint config
   appPackage.eslintConfig = {
-    extends: 'react-app',
+    extends: 'npack-app',
   };
 
   // Setup the browsers list
@@ -411,7 +411,7 @@ module.exports = function (
   console.log(
     chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'run '}build`)
   );
-  console.log('    Bundles the app into static files for production.');
+  console.log('    Bundles the app into optimized files for production.');
   console.log();
   console.log(chalk.cyan(`  ${displayedCommand} test`));
   console.log('    Starts the test runner.');
